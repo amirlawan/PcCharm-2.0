@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Security</title>
+    <link rel="stylesheet" href="path/to/bootstrap.min.css">
+    <style>
+        .container {
+            max-width: 1200px;
+        }
+
+        pre code {
+            display: block;
+            background-color: #f8f9fa;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="container pt-5 pb-4">
+        <div class="row pt-5 pb-2 pb-sm-3">
+            <div class="col-lg-9 offset-lg-3 position-relative zindex-5">
+                <h1 class="pt-lg-4">Linux Security</h1>
+
+                <!-- Understanding Linux Security -->
+                <section class="card border-0 mb-4" id="understanding-linux-security">
+                    <div class="card-header">
+                        <h2 class="h4 mb-n2">Understanding Linux Security</h2>
+                    </div>
+                    <div class="card-body">
+                        <p>Linux is inherently secure by design, but proper configuration and regular monitoring are required to maintain its security. Let’s explore the core security features and common threats.</p>
+                        <h3>Linux Security Features and Mechanisms</h3>
+                        <h4>Users and Groups</h4>
+                        <p>Linux systems categorize entities into users (individual accounts) and groups (collections of users). This system ensures access is limited based on a user’s role or membership in a group.</p>
+                        <pre><code class="language-bash">sudo adduser new_user</code></pre>
+                        <pre><code class="language-bash">sudo usermod -aG groupname new_user</code></pre>
+                        <h4>Permissions</h4>
+                        <p>Permissions control who can read (r), write (w), or execute (x) a file or directory.</p>
+                        <pre><code class="language-bash">ls -l file.txt</code></pre>
+                        <pre><code class="language-bash">chmod 644 file.txt</code></pre>
+                        <h4>SELinux and AppArmor</h4>
+                        <p>Advanced security modules for stricter access policies.</p>
+                        <pre><code class="language-bash">sestatus</code></pre>
+                    </div>
+                </section>
+
+                <!-- Key Linux Security Concepts -->
+                <section class="card border-0 mb-4" id="key-security-concepts">
+                    <div class="card-header">
+                        <h2 class="h4 mb-n2">Key Linux Security Concepts</h2>
+                    </div>
+                    <div class="card-body">
+                        <h3>User Accounts and Passwords</h3>
+                        <p>Managing users and enforcing strong passwords is the foundation of Linux security.</p>
+                        <pre><code class="language-bash">sudo chage -d 0 username</code></pre>
+                        <h3>Filesystem Security</h3>
+                        <p>The filesystem stores sensitive data, making its security crucial.</p>
+                        <pre><code class="language-bash">setfacl -m u:username:rw file.txt</code></pre>
+                        <h3>Network Security</h3>
+                        <p>Networks are a common attack vector. Use firewalls like iptables or firewalld.</p>
+                        <pre><code class="language-bash">sudo iptables -A INPUT -p tcp --dport 22 -j ACCEPT</code></pre>
+                    </div>
+                </section>
+
+                <!-- Practical Implementation -->
+                <section class="card border-0 mb-4" id="practical-implementation">
+                    <div class="card-header">
+                        <h2 class="h4 mb-n2">Practical Implementation</h2>
+                    </div>
+                    <div class="card-body">
+                        <h3>Configuring Firewall Rules</h3>
+                        <p>Install and enable a firewall:</p>
+                        <pre><code class="language-bash">sudo ufw enable</code></pre>
+                        <h3>Securing Remote Access</h3>
+                        <p>Disable root login:</p>
+                        <pre><code class="language-bash">sudo nano /etc/ssh/sshd_config</code></pre>
+                        <h3>Monitoring and Logging</h3>
+                        <p>Analyze logs with tools like Splunk or ELK Stack:</p>
+                        <pre><code class="language-bash">journalctl -xe</code></pre>
+                    </div>
+                </section>
+
+                <h3>Conclusion</h3>
+                <p>Linux security is an ongoing process. By following these detailed steps and practicing regularly, you can protect your systems effectively. Stay informed about emerging threats and continuously refine your skills.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add Bootstrap JS and dependencies -->
+    <script src="path/to/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

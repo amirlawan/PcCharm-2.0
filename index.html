@@ -1,0 +1,767 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="utf-8">
+    <title>PcCharm | Hompage</title>
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/pccharm2.0.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/pccharm2.0.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/pccharm2.0.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" color="#6366f1" href="assets/favicon/pccharm2.0.png">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="white">
+    <!-- Theme mode-->
+    <script>
+      let mode = window.localStorage.getItem('mode'),
+          root = document.getElementsByTagName('html')[0];
+      if (mode !== undefined && mode === 'dark') {
+        root.classList.add('dark-mode');
+      } else {
+        root.classList.remove('dark-mode');
+      }
+      
+      
+    </script>
+    <!-- Scroll down animated button-->
+    <style>
+    :root{--ar-primary:#5e28c3;--ar-primary-rgb:94,40,195;--ar-link-color:#5e28c3;--ar-link-hover-color:#450faa;}.btn-primary{--ar-btn-bg:#5e28c3;--ar-btn-border-color:#5e28c3;--ar-btn-hover-bg:#450faa;--ar-btn-hover-border-color:#450faa;--ar-btn-active-bg:#450faa;--ar-btn-active-border-color:#450faa;--ar-btn-disabled-bg:#5e28c3;--ar-btn-disabled-border-color:#5e28c3;}.btn-outline-primary{--ar-btn-color:#5e28c3;--ar-btn-border-color:#5e28c3;--ar-btn-hover-bg:#5e28c3;--ar-btn-hover-border-color:#5e28c3;--ar-btn-active-bg:#5e28c3;--ar-btn-active-border-color:#5e28c3;--ar-btn-disabled-color:#5e28c3;--ar-btn-disabled-border-color:#5e28c3;}
+      .scroll-down-btn {
+        display: inline-block;
+        text-decoration: none;
+      }
+      .scroll-down-btn p {
+        margin-top: 1.25rem;
+        color: white;
+        font-size: .875rem;
+        font-weight: 500;
+        letter-spacing: .375rem;
+        text-indent: .375rem;
+        animation: colorText 5s ease-out infinite, nudgeText 5s ease-out infinite;
+      }
+      .mouse {
+        background: #2c333e linear-gradient(transparent 0%, transparent 50%, white 50%, white 100%);
+        position: relative;
+        width: 38px;
+        height: 65px;
+        margin: 0 auto;
+        border-radius: 6rem;
+        background-size: 100% 200%;
+        animation: colorSlide 5s linear infinite, nudgeMouse 5s ease-out infinite;
+      }
+      .mouse:before, .mouse:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+      }
+      .mouse:before {
+        width: 34px;
+        height: 61px;
+        background-color: #121519;
+        border-radius: 6rem;
+      }
+      .mouse:after {
+        background-color: white;
+        width: .375rem;
+        height: .375rem;
+        border-radius: 100%;
+        animation: trackBallSlide 5s linear infinite;
+      }
+      @keyframes colorSlide {
+        0% { background-position: 0% 100%; }
+        20% { background-position: 0% 0%; }
+        21% { background-color: #2c333e; }
+        29.99% {
+          background-color: white;
+          background-position: 0% 0%;
+        }
+        30% {
+          background-color: #2c333e;
+          background-position: 0% 100%;
+        }
+        50% { background-position: 0% 0%; }
+        51% { background-color: #2c333e; }
+        59% {
+          background-color: white;
+          background-position: 0% 0%;
+        }
+        60% {
+          background-color: #2c333e;
+          background-position: 0% 100%;
+        }
+        80% { background-position: 0% 0%; }
+        81% { background-color: #2c333e; }
+        90%, 100% {
+          background-color: white;
+        }
+      }
+      @keyframes trackBallSlide {
+        0% {
+          opacity: 1;
+          transform: scale(1) translateY(-20px);
+        }
+        6% {
+          opacity: 1;
+          transform: scale(0.9) translateY(5px);
+        }
+        14% {
+          opacity: 0;
+          transform: scale(0.4) translateY(40px);
+        }
+        15%, 19% {
+          opacity: 0;
+          transform: scale(0.4) translateY(-20px);
+        }
+        28%, 29.99% {
+          opacity: 1;
+          transform: scale(1) translateY(-20px);
+        }
+        30% {
+          opacity: 1;
+          transform: scale(1) translateY(-20px);
+        }
+        36% {
+          opacity: 1;
+          transform: scale(0.9) translateY(5px);
+        }
+        44% {
+          opacity: 0;
+          transform: scale(0.4) translateY(40px);
+        }
+        45%, 49% {
+          opacity: 0;
+          transform: scale(0.4) translateY(-20px);
+        }
+        58%, 59.99% {
+          opacity: 1;
+          transform: scale(1) translateY(-20px);
+        }
+        60% {
+          opacity: 1;
+          transform: scale(1) translateY(-20px);
+        }
+        66% {
+          opacity: 1;
+          transform: scale(0.9) translateY(5px);
+        }
+        74% {
+          opacity: 0;
+          transform: scale(0.4) translateY(40px);
+        }
+        75%, 79% {
+          opacity: 0;
+          transform: scale(0.4) translateY(-20px);
+        }
+        88%, 100% {
+          opacity: 1;
+          transform: scale(1) translateY(-20px);
+        }
+      }
+      @keyframes nudgeMouse {
+        0%, 30%, 60%, 90% { transform: translateY(0); }
+        20%, 50%, 80% { transform: translateY(8px); }
+      }
+      @keyframes nudgeText {
+        0%, 30%, 60%, 90% { transform: translateY(0); }
+        20%, 50%, 80% { transform: translateY(2px); }
+      }
+      @keyframes colorText {
+        21%, 51%, 81% { color: #2c333e; }
+        30%, 60%, 90% { color: white; }
+      }
+      
+    </style>
+    <!-- Page loading styles-->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .dark-mode .page-loading {
+        background-color: #121519;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-family: 'Inter', sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #6f788b;
+      }
+      .dark-mode .page-loading-inner > span {
+        color: #fff;
+        opacity: .6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        background-color: #d7dde2; 
+        border-radius: 50%;
+        opacity: 0;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      .dark-mode .page-spinner {
+        background-color: rgba(255,255,255,.25);
+      }
+      @-webkit-keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+      @keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+      
+    </style>
+    <!-- Page loading scripts-->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 1500);
+        };
+      })();
+      
+    </script>
+    <!-- Import Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" id="google-font">
+    <!-- Vendor styles-->
+    <link rel="stylesheet" media="screen" href="assets/vendor/aos/dist/aos.css"/>
+    <link rel="stylesheet" media="screen" href="assets/vendor/img-comparison-slider/dist/styles.css"/>
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+    <!-- Customizer generated styles-->
+    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
+    <!-- Google Tag Manager-->
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-WKV3GT5');
+    </script>
+    <link rel="stylesheet" href="assets/vendor/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="assets\css\theme.min.css">
+    <style>
+        :root{--ar-primary:#5e28c3;--ar-primary-rgb:94,40,195;--ar-link-color:#5e28c3;--ar-link-hover-color:#450faa;}.btn-primary{--ar-btn-bg:#5e28c3;--ar-btn-border-color:#5e28c3;--ar-btn-hover-bg:#450faa;--ar-btn-hover-border-color:#450faa;--ar-btn-active-bg:#450faa;--ar-btn-active-border-color:#450faa;--ar-btn-disabled-bg:#5e28c3;--ar-btn-disabled-border-color:#5e28c3;}.btn-outline-primary{--ar-btn-color:#5e28c3;--ar-btn-border-color:#5e28c3;--ar-btn-hover-bg:#5e28c3;--ar-btn-hover-border-color:#5e28c3;--ar-btn-active-bg:#5e28c3;--ar-btn-active-border-color:#5e28c3;--ar-btn-disabled-color:#5e28c3;--ar-btn-disabled-border-color:#5e28c3;}
+    </style>
+</head>
+<body>
+   <!-- Google Tag Manager (noscript)-->
+    <noscript>
+      <iframe src="http://www.googletagmanager.com/ns.html?id=GTM-WKV3GT5" height="0" width="0" style="display: none; visibility: hidden;"></iframe>
+    </noscript>
+  <!-----spinner----->
+  <div class="page-loading active">
+    <div class="page-loading-inner">
+      <div class="page-spinner"></div><span>Loading...</span>
+    </div>
+  </div>
+      <!-- Page wrapper-->
+      <main class="page-wrapper">
+        <div class="dark-mode">
+          <!-- Navbar. Remove 'fixed-top' class to make the navigation bar scrollable with the page-->
+          <header class="navbar navbar-expand-lg fixed-top">
+            <div class="container"><a class="navbar-brand pe-sm-3" href="index-2.html"><span class="text-primary flex-shrink-0 me-2">
+            <img src="assets/img/pccharm2.0.png" alt="" height="32" width="35">      
+            </span>PcCharm</a>
+              <div class="form-check form-switch mode-switch order-lg-2 me-3 me-lg-4 ms-auto" data-bs-toggle="mode">
+                <input class="form-check-input" type="checkbox" id="theme-mode">
+                <label class="form-check-label" for="theme-mode"><i class="ai-sun fs-lg"></i></label>
+                <label class="form-check-label" for="theme-mode"><i class="ai-moon fs-lg"></i></label>
+              </div><a class="btn btn-primary btn-sm fs-sm order-lg-3 d-none d-sm-inline-flex" href="account-signin.html"><i class="ai-login fs-xl me-2 ms-n1"></i>sign in</a>
+              <button class="navbar-toggler ms-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+              <nav class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav navbar-nav-scroll me-auto" style="--ar-scroll-height: 520px;">
+                  <li class="nav-item dropdown"><a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown" aria-expanded="false">Tutorials</a>
+                    <div class="dropdown-menu overflow-hidden p-0">
+                      <div class="d-lg-flex">
+                        <div class="mega-dropdown-column pt-1 pt-lg-3 pb-lg-4">
+                          <ul class="list-unstyled mb-0">
+                            <h3>All Courses</h3>
+                            <li><a class="dropdown-item" href="html/intro.html">HTML</a><span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 rounded-3 rounded-start-0" style="background-image: url(assets/img/courses/html5-original.svg);"></span></li>
+                            <li><a class="dropdown-item" href="#">CSS</a><span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 zindex-2 opacity-0" style="background-image: url(assets/img/courses/css3-original.svg);"></span></li>
+                            <li><a class="dropdown-item" href="#">JavaScript</a><span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 zindex-2 opacity-0" style="background-image: url(assets/img/courses/javascript-original.svg);"></span></li>
+                            <li><a class="dropdown-item" href="#">JAVA</a><span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 zindex-2 opacity-0" style="background-image: url(assets/img/courses/java-original.svg);"></span></li>
+                            <li><a class="dropdown-item" href="#">Python</a><span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 zindex-2 opacity-0" style="background-image: url(assets/img/courses/python-original.svg);"></span></li>
+                            <li><a class="dropdown-item" href="#">C programming</a><span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 zindex-2 opacity-0" style="background-image: url(assets/img/courses/c-original.svg);"></span></li>
+                            <li><a class="dropdown-item" href="#">SQL</a><span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 zindex-2 opacity-0" style="background-image: url(assets/img/courses/mysql-original.svg);"></span></li>
+                            <li><a class="dropdown-item" href="#">Penetration Testing</a><span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 zindex-2 opacity-0" style="background-image: url(assets/img/courses/lock.svg);"></span></li>
+                            <li><a class="dropdown-item" href="#">Networking</a><span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 zindex-2 opacity-0" style="background-image: url(assets/img/courses/networkx-original.svg);"></span></li>
+                            <li><a class="dropdown-item" href="linux/intro.html">Linux basics</a><span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 zindex-2 opacity-0" style="background-image: url(assets/img/courses/linux-original.svg);"></span></li>
+                          </ul>
+                        </div>
+                        <div class="mega-dropdown-column pb-2 pt-lg-3 pb-lg-4">
+                          <ul class="list-unstyled mb-0">
+                            <h3>Other Courses</h3>
+                            <li><a class="dropdown-item" href="#">Learn Bootstrap</a><span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 zindex-2 opacity-0" style="background-image: url(assets/img/courses/bootstrap-original.svg);"></span></li>
+                            <li><a class="dropdown-item" href="#">React</a><span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 zindex-2 opacity-0" style="background-image: url(assets/img/courses/react-original.svg);"></span></li>
+                            <li><a class="dropdown-item" href="#">PHP</a><span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 zindex-2 opacity-0" style="background-image: url(assets/img/courses/php-original.svg);"></span></li>
+                            <li><a class="dropdown-item" href="#">C#</a><span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 zindex-2 opacity-0" style="background-image: url(assets/img/courses/csharp-original.svg);"></span></li>
+                            <li><a class="dropdown-item" href="#">Introduction To ChatGPT <span class="text-danger fs-xs ms-2">New</span></a><span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 zindex-2 opacity-0" style="background-image: url(assets/img/megamenu/yeoga-studio.jpg);"></span></li>
+                            <li><a class="dropdown-item" href="#">Data Science<span class="text-danger fs-xs ms-2">New</span></a><span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 zindex-2 opacity-0" style="background-image: url(assets/img/megamenu/i2nfluencer.jpg);"></span></li>
+                            <li><a class="dropdown-item" href="#">Career Road<span class="text-danger fs-xs ms-2">New</span></a><span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 zindex-2 opacity-0" style="background-image: url(assets/img/megamenu/eog-homepage.jpg);"></span></li>
+                          </ul>
+                        </div>
+                        <div class="mega-dropdown-column position-relative border-start zindex-3"></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#">References</a></li>
+                  <li class="nav-item"><a class="nav-link" href="404.html">Blog</a></li>
+                  <li class="nav-item"><a class="nav-link" href="schedule.html">Calender</a></li>
+                  <li class="nav-item"><a class="nav-link" href="contact us.html">Contact</a></li>
+                  <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                </ul>
+                <div class="d-sm-none p-3 mt-n3"><a class="btn btn-primary w-100  mb-1" href="account-signin.html"><i class="ai-login fs-xl me-2 ms-n1"></i>Sign in</a></div>
+              </nav>
+            </div>
+          </header>
+        </div>
+
+       <!-- Page content-->
+      <!-- Hero-->
+      <section class="bg-dark dark-mode d-flex min-vh-100 position-relative overflow-hidden py-5">
+        <div class="container d-flex flex-column justify-content-center position-relative zindex-2 pt-sm-3 pt-md-4 pt-xl-5 pb-1 pb-sm-3 pb-lg-4 pb-xl-5">
+          <div class="row flex-lg-nowrap align-items-center pb-5 pt-2 pt-lg-4 pt-xl-0 mt-lg-4 mt-xl-0">
+            <div class="col-lg-7 order-lg-2 ms-lg-4 mb-2 mb-lg-0">
+              <div class="parallax order-lg-2 mx-auto" style="max-width: 740px;">
+                <div class="parallax-layer" data-depth="0.05"><img src="assets/img/pccharm2.0.png" alt="Layer" style="width: 400px; height: auto;"></div>
+                <div class="parallax-layer" data-depth="-0.05"><img src="assets/img/landing/saas-2/hero/02.png" style="animation: rotate-cw 100s linear infinite;" alt="Layer"></div>
+                <div class="parallax-layer zindex-2" data-depth="0.3"><img src="assets/img/landing/saas-2/hero/03.png" alt="Layer"></div>
+                <div class="parallax-layer zindex-2" data-depth="0.15"><img src="assets/img/landing/saas-2/hero/04.png" alt="Layer"></div>
+                <div class="parallax-layer zindex-2" data-depth="0.4"><img src="assets/img/landing/saas-2/hero/05.png" alt="Layer"></div>
+              </div>
+            </div>
+            <div class="col-lg-5 order-lg-1 text-center text-lg-start me-xl-5"><span class="badge bg-faded-warning text-warning fs-sm">Boost you IT skills&nbsp; 🚀</span>
+              <h1 class="display-4 py-3 my-2 mb-xl-3">We are preferred to make you the best you can be</h1>
+              <ul class="list-unstyled d-table text-start mx-auto mx-lg-0 mb-0">
+                <li class="d-flex pb-2 mb-1"><i class="ai-check-alt text-primary lead me-2"></i>Learn Web Development and programming</li>
+                <li class="d-flex pb-2 mb-1"><i class="ai-check-alt text-primary lead me-2"></i>Learn Ethical Hacking + penetration Testing</li>
+                <li class="d-flex pb-2 mb-1"><i class="ai-check-alt text-primary lead me-2"></i>Learn Linux and Database Laguages</li>
+              </ul>
+              <div class="d-flex justify-content-center justify-content-lg-start pt-4 pt-xl-5">
+                <div class="text-center"><a class="btn btn-lg btn-primary rounded-pill w-100 w-sm-auto" href="#">Start from Scratch</a>
+                  <p class="fs-sm pt-2 mt-sm-1 mb-0">100% free to get started!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+       <!-- Services grid-->
+       <section class="container py-5">
+        <h2 class="h1 text-center">Courses</h2>
+        <p class="text-center pb-4 mb-2 mb-lg-3">Below are the available course you can engage</p>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+          <!-- Item-->
+          <div class="col"><a class="card card-hover-primary border-0 h-100 text-decoration-none" href="html/intro.html">
+              <div class="card-body pb-0">
+               
+            <svg viewBox="0 0 128 128" style="width:150; height:150;">
+              <path fill="#E44D26" d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198-45.019 12.48z"></path><path fill="#F16529" d="M64 116.8l36.378-10.086 8.559-95.878H64z"></path><path fill="#EBEBEB" d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692 3.382 37.927H64zm0 35.743l-.061.017-15.327-4.14-.979-10.975H33.816l1.928 21.609 28.193 7.826.063-.017z"></path><path fill="#fff" d="M63.952 52.455v13.763h16.947l-1.597 17.849-15.35 4.143v14.319l28.215-7.82.207-2.325 3.234-36.233.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092.628-6.978.329-3.692z"></path>
+              </svg>
+            
+                <h3 class="h4 card-title mt-0">HTML5</h3>
+                <p class="card-text">Master the fundamentals of web development with HTML5. Learn to structure content, create semantic markup, and build a solid foundation for any website.</p>
+              </div>
+              <div class="card-footer border-0 py-3 my-3 mb-sm-4">
+                <button type="button" class="btn btn-primary">Engage</button>
+              </div></a></div>
+          <!-- Item-->
+          <div class="col"><a class="card card-hover-primary border-0 h-100 text-decoration-none" href="#">
+              <div class="card-body pb-0">
+                
+            <svg viewBox="0 0 128 128" style="width:150; height:150;">
+              <path fill="#1572B6" d="M18.814 114.123L8.76 1.352h110.48l-10.064 112.754-45.243 12.543-45.119-12.526z"></path><path fill="#33A9DC" d="M64.001 117.062l36.559-10.136 8.601-96.354h-45.16v106.49z"></path><path fill="#fff" d="M64.001 51.429h18.302l1.264-14.163H64.001V23.435h34.682l-.332 3.711-3.4 38.114h-30.95V51.429z"></path><path fill="#EBEBEB" d="M64.083 87.349l-.061.018-15.403-4.159-.985-11.031H33.752l1.937 21.717 28.331 7.863.063-.018v-14.39z"></path><path fill="#fff" d="M81.127 64.675l-1.666 18.522-15.426 4.164v14.39l28.354-7.858.208-2.337 2.406-26.881H81.127z"></path><path fill="#EBEBEB" d="M64.048 23.435v13.831H30.64l-.277-3.108-.63-7.012-.331-3.711h34.646zm-.047 27.996v13.831H48.792l-.277-3.108-.631-7.012-.33-3.711h16.447z"></path>
+              </svg>
+            
+                <h3 class="h4 card-title mt-0">CSS3</h3>
+                <p class="card-text justify-content-end">Style your web creations with CSS3. Learn to control colors, fonts, layout, and responsive design to build beautiful and engaging websites.</p>
+              </div>
+              <div class="card-footer border-0 py-3 my-3 mb-sm-4">
+                <button type="button" class="btn btn-primary">Engage</button>
+              </div></a></div>
+          <!-- Item-->
+          <div class="col"><a class="card card-hover-primary border-0 h-100 text-decoration-none" href="#">
+              <div class="card-body pb-0">
+              
+            <svg viewBox="0 0 128 128" style="width:150; height:150;">
+              <path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185H1.408z"></path><path fill="#323330" d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zM69.462 58.943H57.753l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z"></path>
+              </svg>
+            
+                <h3 class="h4 card-title mt-0">JavaScript</h3>
+                <p class="card-text">Bring your websites to life with JavaScript. Learn the basics of programming and add interactivity, animations, and dynamic features to your web projects.</p>
+              </div>
+              <div class="card-footer border-0 py-3 my-3 mb-sm-4">
+                <button type="button" class="btn btn-primary">Engage</button>
+              </div></a></div>
+          <!-- Item-->
+          <div class="col"><a class="card card-hover-primary border-0 h-100 text-decoration-none" href="#">
+              <div class="card-body pb-0">
+                
+            <svg viewBox="0 0 128 128" style="width:150; height:150;">
+              <path fill="#0074BD" d="M47.617 98.12s-4.767 2.774 3.397 3.71c9.892 1.13 14.947.968 25.845-1.092 0 0 2.871 1.795 6.873 3.351-24.439 10.47-55.308-.607-36.115-5.969zm-2.988-13.665s-5.348 3.959 2.823 4.805c10.567 1.091 18.91 1.18 33.354-1.6 0 0 1.993 2.025 5.132 3.131-29.542 8.64-62.446.68-41.309-6.336z"></path><path fill="#EA2D2E" d="M69.802 61.271c6.025 6.935-1.58 13.17-1.58 13.17s15.289-7.891 8.269-17.777c-6.559-9.215-11.587-13.792 15.635-29.58 0 .001-42.731 10.67-22.324 34.187z"></path><path fill="#0074BD" d="M102.123 108.229s3.529 2.91-3.888 5.159c-14.102 4.272-58.706 5.56-71.094.171-4.451-1.938 3.899-4.625 6.526-5.192 2.739-.593 4.303-.485 4.303-.485-4.953-3.487-32.013 6.85-13.743 9.815 49.821 8.076 90.817-3.637 77.896-9.468zM49.912 70.294s-22.686 5.389-8.033 7.348c6.188.828 18.518.638 30.011-.326 9.39-.789 18.813-2.474 18.813-2.474s-3.308 1.419-5.704 3.053c-23.042 6.061-67.544 3.238-54.731-2.958 10.832-5.239 19.644-4.643 19.644-4.643zm40.697 22.747c23.421-12.167 12.591-23.86 5.032-22.285-1.848.385-2.677.72-2.677.72s.688-1.079 2-1.543c14.953-5.255 26.451 15.503-4.823 23.725 0-.002.359-.327.468-.617z"></path><path fill="#EA2D2E" d="M76.491 1.587S89.459 14.563 64.188 34.51c-20.266 16.006-4.621 25.13-.007 35.559-11.831-10.673-20.509-20.07-14.688-28.815C58.041 28.42 81.722 22.195 76.491 1.587z"></path><path fill="#0074BD" d="M52.214 126.021c22.476 1.437 57-.8 57.817-11.436 0 0-1.571 4.032-18.577 7.231-19.186 3.612-42.854 3.191-56.887.874 0 .001 2.875 2.381 17.647 3.331z"></path>
+              </svg>
+            
+                <h3 class="h4 card-title mt-0">JAVA</h3>
+                <p class="card-text">Adipiscing posuere dui, amet, augue nisl dictum justo, enim. Sed neque congue non quam ultrices interdum vitae vestibulum.</p>
+              </div>
+              <div class="card-footer border-0 py-3 my-3 mb-sm-4">
+                <button type="button" class="btn btn-primary">Engage</button>
+              </div></a></div>
+          <!-- Item-->
+          <div class="col"><a class="card card-hover-primary border-0 h-100 text-decoration-none" href="#">
+              <div class="card-body pb-0">
+              
+            <svg viewBox="0 0 128 128" style="width:150; height:150;">
+              <linearGradient id="python-original-a" gradientUnits="userSpaceOnUse" x1="70.252" y1="1237.476" x2="170.659" y2="1151.089" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)"><stop offset="0" stop-color="#5A9FD4"></stop><stop offset="1" stop-color="#306998"></stop></linearGradient><linearGradient id="python-original-b" gradientUnits="userSpaceOnUse" x1="209.474" y1="1098.811" x2="173.62" y2="1149.537" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)"><stop offset="0" stop-color="#FFD43B"></stop><stop offset="1" stop-color="#FFE873"></stop></linearGradient><path fill="url(#python-original-a)" d="M63.391 1.988c-4.222.02-8.252.379-11.8 1.007-10.45 1.846-12.346 5.71-12.346 12.837v9.411h24.693v3.137H29.977c-7.176 0-13.46 4.313-15.426 12.521-2.268 9.405-2.368 15.275 0 25.096 1.755 7.311 5.947 12.519 13.124 12.519h8.491V67.234c0-8.151 7.051-15.34 15.426-15.34h24.665c6.866 0 12.346-5.654 12.346-12.548V15.833c0-6.693-5.646-11.72-12.346-12.837-4.244-.706-8.645-1.027-12.866-1.008zM50.037 9.557c2.55 0 4.634 2.117 4.634 4.721 0 2.593-2.083 4.69-4.634 4.69-2.56 0-4.633-2.097-4.633-4.69-.001-2.604 2.073-4.721 4.633-4.721z" transform="translate(0 10.26)"></path><path fill="url(#python-original-b)" d="M91.682 28.38v10.966c0 8.5-7.208 15.655-15.426 15.655H51.591c-6.756 0-12.346 5.783-12.346 12.549v23.515c0 6.691 5.818 10.628 12.346 12.547 7.816 2.297 15.312 2.713 24.665 0 6.216-1.801 12.346-5.423 12.346-12.547v-9.412H63.938v-3.138h37.012c7.176 0 9.852-5.005 12.348-12.519 2.578-7.735 2.467-15.174 0-25.096-1.774-7.145-5.161-12.521-12.348-12.521h-9.268zM77.809 87.927c2.561 0 4.634 2.097 4.634 4.692 0 2.602-2.074 4.719-4.634 4.719-2.55 0-4.633-2.117-4.633-4.719 0-2.595 2.083-4.692 4.633-4.692z" transform="translate(0 10.26)"></path><radialGradient id="python-original-c" cx="1825.678" cy="444.45" r="26.743" gradientTransform="matrix(0 -.24 -1.055 0 532.979 557.576)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#B8B8B8" stop-opacity=".498"></stop><stop offset="1" stop-color="#7F7F7F" stop-opacity="0"></stop></radialGradient><path opacity=".444" fill="url(#python-original-c)" d="M97.309 119.597c0 3.543-14.816 6.416-33.091 6.416-18.276 0-33.092-2.873-33.092-6.416 0-3.544 14.815-6.417 33.092-6.417 18.275 0 33.091 2.872 33.091 6.417z"></path>
+              </svg>
+            
+                <h3 class="h4 card-title mt-0">Python</h3>
+                <p class="card-text">Molestie enim tempus egestas a at enim. Velit hendrerit nibh eget porta pretium. Ipsum orci habitasse eget malesuada platea.</p>
+              </div>
+              <div class="card-footer border-0 py-3 my-3 mb-sm-4">
+                <button type="button" class="btn btn-primary">Engage</button>
+              </div></a></div>
+          <!-- Item-->
+          <div class="col"><a class="card card-hover-primary border-0 h-100 text-decoration-none" href="./C/intro.html">
+              <div class="card-body pb-0">
+             
+            <svg viewBox="0 0 128 128" style="width:150; height:150;" >
+              <path fill="#659AD3" d="M115.4 30.7L67.1 2.9c-.8-.5-1.9-.7-3.1-.7-1.2 0-2.3.3-3.1.7l-48 27.9c-1.7 1-2.9 3.5-2.9 5.4v55.7c0 1.1.2 2.4 1 3.5l106.8-62c-.6-1.2-1.5-2.1-2.4-2.7z"></path><path fill="#03599C" d="M10.7 95.3c.5.8 1.2 1.5 1.9 1.9l48.2 27.9c.8.5 1.9.7 3.1.7 1.2 0 2.3-.3 3.1-.7l48-27.9c1.7-1 2.9-3.5 2.9-5.4V36.1c0-.9-.1-1.9-.6-2.8l-106.6 62z"></path><path fill="#fff" d="M85.3 76.1C81.1 83.5 73.1 88.5 64 88.5c-13.5 0-24.5-11-24.5-24.5s11-24.5 24.5-24.5c9.1 0 17.1 5 21.3 12.5l13-7.5c-6.8-11.9-19.6-20-34.3-20-21.8 0-39.5 17.7-39.5 39.5s17.7 39.5 39.5 39.5c14.6 0 27.4-8 34.2-19.8l-12.9-7.6z"></path>
+              </svg>
+            
+                <h3 class="h4 card-title mt-0">C programming</h3>
+                <p class="card-text">Massa donec quam orci feugiat. Quis iaculis facilisi ornare aenean lorem enim purus in lacus in ullamcorper diam consequat.</p>
+              </div>
+              <div class="card-footer border-0 py-3 my-3 mb-sm-4">
+                <button type="button" class="btn btn-primary">Engage</button>
+              </div></a></div>
+          <!-- Item-->
+          <div class="col"><a class="card card-hover-primary border-0 h-100 text-decoration-none" href="#">
+              <div class="card-body pb-0">
+                
+            <svg viewBox="0 0 128 128" style="width:150; height:150;">
+              <path fill="#00618A" d="M2.001 90.458h4.108V74.235l6.36 14.143c.75 1.712 1.777 2.317 3.792 2.317s3.003-.605 3.753-2.317l6.36-14.143v16.223h4.108V74.262c0-1.58-.632-2.345-1.936-2.739-3.121-.974-5.215-.131-6.163 1.976l-6.241 13.958-6.043-13.959c-.909-2.106-3.042-2.949-6.163-1.976C2.632 71.917 2 72.681 2 74.261v16.197zm31.898-13.206h4.107v8.938c-.038.485.156 1.625 2.406 1.661 1.148.018 8.862 0 8.934 0V77.208h4.117c.019 0-.004 14.514-.004 14.574.022 3.58-4.441 4.357-6.499 4.417H33.988v-2.764c.022 0 12.963.003 12.995-.001 2.645-.279 2.332-1.593 2.331-2.035v-1.078h-8.731c-4.062-.037-6.65-1.81-6.683-3.85-.002-.187.089-9.129-.001-9.219z"></path><path fill="#E48E00" d="M56.63 90.458h11.812c1.383 0 2.727-.289 3.793-.789 1.777-.816 2.646-1.922 2.646-3.372v-3.002c0-1.185-.987-2.292-2.923-3.028-1.027-.396-2.292-.605-3.517-.605h-4.978c-1.659 0-2.449-.5-2.646-1.606-.039-.132-.039-.237-.039-.369v-1.87c0-.105 0-.211.039-.342.197-.843.632-1.08 2.094-1.212l.395-.026h11.733v-2.738H63.504c-1.659 0-2.528.105-3.318.342-2.449.764-3.517 1.975-3.517 4.082v2.396c0 1.844 2.095 3.424 5.61 3.793.396.025.79.053 1.185.053h4.267c.158 0 .316 0 .435.025 1.304.105 1.856.343 2.252.816a.98.98 0 01.315.737v2.397c0 .289-.197.658-.592.974-.355.316-.948.527-1.738.58l-.435.026H56.63v2.738zm43.881-4.766c0 2.817 2.094 4.397 6.32 4.714.395.026.79.052 1.185.052h10.706V87.72h-10.784c-2.41 0-3.318-.606-3.318-2.055V71.497h-4.108v14.195zm-23.008.142v-9.765c0-2.48 1.742-3.985 5.186-4.46a7.8 7.8 0 011.108-.079h7.799c.396 0 .752.026 1.147.079 3.444.475 5.187 1.979 5.187 4.46v9.765c0 2.014-.74 3.09-2.445 3.792l4.048 3.653h-4.771l-3.274-2.956-3.296.209h-4.395a9.075 9.075 0 01-2.414-.343c-2.613-.712-3.88-2.085-3.88-4.355zm4.434-.237c0 .132.039.265.079.423.237 1.135 1.307 1.768 2.929 1.768h3.732l-3.428-3.095h4.771l2.989 2.7c.552-.295.914-.743 1.041-1.32.039-.132.039-.264.039-.396v-9.368c0-.105 0-.238-.039-.37-.238-1.056-1.307-1.662-2.89-1.662h-6.216c-1.82 0-3.008.792-3.008 2.032v9.288z"></path><path fill="#00618A" d="M122.336 66.952c-2.525-.069-4.454.166-6.104.861-.469.198-1.216.203-1.292.79.257.271.297.674.502 1.006.394.637 1.059 1.491 1.652 1.938.647.489 1.315 1.013 2.011 1.437 1.235.754 2.615 1.184 3.806 1.938.701.446 1.397 1.006 2.082 1.509.339.247.565.634 1.006.789v-.071c-.231-.294-.291-.698-.503-1.006l-.934-.934c-.913-1.212-2.071-2.275-3.304-3.159-.982-.705-3.18-1.658-3.59-2.801l-.072-.071c.696-.079 1.512-.331 2.154-.503 1.08-.29 2.045-.215 3.16-.503l1.508-.432v-.286c-.563-.578-.966-1.344-1.58-1.867-1.607-1.369-3.363-2.737-5.17-3.879-1.002-.632-2.241-1.043-3.304-1.579-.356-.181-.984-.274-1.221-.575-.559-.711-.862-1.612-1.293-2.441a93.068 93.068 0 01-2.585-5.458c-.544-1.245-.9-2.473-1.579-3.59-3.261-5.361-6.771-8.597-12.208-11.777-1.157-.677-2.55-.943-4.021-1.292l-2.37-.144c-.481-.201-.983-.791-1.436-1.077-1.802-1.138-6.422-3.613-7.756-.358-.842 2.054 1.26 4.058 2.011 5.099.527.73 1.203 1.548 1.58 2.369.248.54.29 1.081.503 1.652.521 1.406.976 2.937 1.651 4.236.341.658.718 1.351 1.149 1.939.264.36.718.52.789 1.077-.443.62-.469 1.584-.718 2.369-1.122 3.539-.699 7.938.934 10.557.501.805 1.681 2.529 3.303 1.867 1.419-.578 1.103-2.369 1.509-3.95.092-.357.035-.621.215-.861v.072l1.293 2.585c.957 1.541 2.654 3.15 4.093 4.237.746.563 1.334 1.538 2.298 1.867v-.073h-.071c-.188-.291-.479-.411-.719-.646-.562-.551-1.187-1.235-1.651-1.867-1.309-1.776-2.465-3.721-3.519-5.745-.503-.966-.94-2.032-1.364-3.016-.164-.379-.162-.953-.502-1.148-.466.72-1.149 1.303-1.509 2.154-.574 1.36-.648 3.019-.861 4.739l-.144.071c-1.001-.241-1.352-1.271-1.724-2.154-.94-2.233-1.115-5.83-.287-8.401.214-.666 1.181-2.761.789-3.376-.187-.613-.804-.967-1.148-1.437a11.222 11.222 0 01-1.149-2.011c-.77-1.741-1.129-3.696-1.938-5.457-.388-.842-1.042-1.693-1.58-2.441-.595-.83-1.262-1.44-1.724-2.442-.164-.356-.387-.927-.144-1.293.077-.247.188-.35.432-.431.416-.321 1.576.107 2.01.287 1.152.479 2.113.934 3.089 1.58.468.311.941.911 1.508 1.077h.646c1.011.232 2.144.071 3.088.358 1.67.508 3.166 1.297 4.524 2.155 4.139 2.614 7.522 6.334 9.838 10.772.372.715.534 1.396.861 2.154.662 1.528 1.496 3.101 2.154 4.596.657 1.491 1.298 2.996 2.227 4.237.488.652 2.374 1.002 3.231 1.364.601.254 1.585.519 2.154.861 1.087.656 2.141 1.437 3.16 2.155.509.362 2.076 1.149 2.154 1.798zM90.237 39.593a5.124 5.124 0 00-1.293.144v.071h.072c.251.517.694.849 1.005 1.293l.719 1.508.071-.071c.445-.313.648-.814.646-1.58-.179-.188-.205-.423-.359-.646-.204-.3-.602-.468-.861-.719z"></path>
+              </svg>
+            
+                <h3 class="h4 card-title mt-0">SQL</h3>
+                <p class="card-text">Massa donec quam orci feugiat. Quis iaculis facilisi ornare aenean lorem enim purus in lacus in ullamcorper diam consequat.</p>
+              </div>
+              <div class="card-footer border-0 py-3 my-3 mb-sm-4">
+                <button type="button" class="btn btn-primary">Engage</button>
+              </div></a></div>
+          <!-- Item-->
+          <div class="col"><a class="card card-hover-primary border-0 h-100 text-decoration-none" href="#">
+              <div class="card-body pb-0">
+               
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" style="width: 220px; height:150px;" >
+                  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="verdana san-serif" font-size="60" font-weight="bold" fill="red">Pentest</text>
+                </svg>
+                
+                <h3 class="h4 card-title mt-0">Penetration Testing</h3>
+                <p class="card-text">Massa donec quam orci feugiat. Quis iaculis facilisi ornare aenean lorem enim purus in lacus in ullamcorper diam consequat.</p>
+              </div>
+              <div class="card-footer border-0 py-3 my-3 mb-sm-4">
+                <button type="button" class="btn btn-primary">Engage</button>
+              </div></a></div>
+          <!-- Item-->
+          <div class="col"><a class="card card-hover-primary border-0 h-100 text-decoration-none" href="#">
+              <div class="card-body pb-0">
+                
+            <svg viewBox="0 0 128 128" style="width:150; height:150;"> 
+              <path d="M78.075 69.24c9.505-3.51 14.51-13.887 11.182-23.173C85.93 36.78 75.526 32.098 66.022 35.61c-9.504 3.512-14.51 13.886-11.181 23.173 3.328 9.287 13.732 13.968 23.234 10.457z" fill="#FF7F0E"></path><path d="M74.15 21.646a31.87 31.87 0 00-12.33 1.965c-16.292 6.02-24.966 23.912-19.213 39.963 5.753 16.051 23.804 24.134 40.096 18.114v-.003l.002-.001c16.29-6.02 24.964-23.908 19.211-39.96C97.602 29.687 86.37 22.133 74.15 21.647zm-.24 6.514c9.68.35 18.446 6.304 21.84 15.776 4.527 12.63-2.258 26.78-15.316 31.605v.002h-.002c-13.06 4.824-27.133-1.552-31.659-14.18-4.526-12.629 2.26-26.781 15.319-31.607a25.617 25.617 0 019.818-1.596zm18.162 63.276a17.792 17.792 0 00-6.892 1.095c-9.1 3.362-13.962 13.373-10.74 22.36 3.22 8.986 13.338 13.507 22.439 10.144 9.1-3.362 13.96-13.37 10.738-22.357-2.414-6.74-8.71-10.968-15.545-11.242zm-.172 4.656c5.02.177 9.552 3.261 11.309 8.166 2.345 6.54-1.164 13.878-7.953 16.387-6.791 2.509-14.065-.795-16.408-7.334-2.345-6.541 1.165-13.88 7.955-16.387a13.326 13.326 0 015.097-.832zM22.566 58.865a12.746 12.746 0 00-4.937.785c-6.518 2.41-9.999 9.578-7.692 16.014 2.308 6.436 9.555 9.679 16.073 7.27 6.517-2.41 9.998-9.578 7.691-16.014-1.73-4.827-6.238-7.858-11.135-8.055zm-.123 3.336c3.596.127 6.841 2.337 8.1 5.85 1.679 4.684-.835 9.939-5.697 11.736-4.862 1.797-10.073-.57-11.752-5.254-1.68-4.684.835-9.939 5.697-11.736a9.549 9.549 0 013.652-.596z" fill="#2c7fb8"></path><path d="M42.54 60.773l-11.75 4.344 1.86 5.033 11.75-4.34zm42.542 16.543l-7.053 2.528 5.746 16.031 7.053-2.527zm25.965-74.795a12.89 12.89 0 00-9.076 3.317c-5.16 4.653-5.65 12.575-1.02 17.607 4.632 5.033 12.6 5.281 17.758.627 5.159-4.652 5.651-12.573 1.02-17.605-2.316-2.516-5.467-3.836-8.682-3.946zm-.131 3.338c2.358.078 4.658 1.048 6.344 2.88 3.372 3.663 3.05 9.373-.797 12.843-3.846 3.47-9.671 3.255-13.043-.408-3.372-3.664-3.052-9.373.797-12.844a9.525 9.525 0 016.699-2.47z" fill="#2c7fb8"></path><path d="M100.705 20.01L91.4 28.39l3.592 3.987 9.303-8.379zM62.568 95.434c-4.42-.722-8.685 2.24-9.527 6.627-.842 4.385 2.109 8.583 6.53 9.304 4.418.721 8.681-2.239 9.525-6.625v-.002c.84-4.384-2.109-8.583-6.528-9.304zm-.351 2.148h.002c3.263.534 5.36 3.522 4.74 6.746-.62 3.227-3.775 5.422-7.039 4.889-3.266-.533-5.362-3.521-4.742-6.746.62-3.227 3.774-5.42 7.039-4.889z" fill="#2c7fb8"></path><path d="M68.037 102.771l-.56 3.438 7.937 1.293.56-3.438zM13.723 38.945a8.262 8.262 0 00-3.205.498c-4.236 1.549-6.512 6.194-5.03 10.377 1.483 4.183 6.179 6.302 10.414 4.752 4.233-1.548 6.507-6.191 5.026-10.373l.002-.002c-1.112-3.136-4.03-5.113-7.207-5.252zm-.088 2.164c2.332.09 4.434 1.53 5.244 3.813l-.002.002c1.08 3.044-.564 6.448-3.723 7.603-3.16 1.157-6.536-.39-7.615-3.435-1.08-3.045.564-6.448 3.725-7.604h.002a6.182 6.182 0 012.369-.379z" fill="#2c7fb8"></path><path d="M17.078 52.713l-3.281 1.164 2.644 7.459 3.282-1.162zm98.07 9.139c-3.174-.07-6.27 1.707-7.726 4.738-1.966 4.02-.2 8.92 3.875 10.703 4.068 1.814 8.922.004 10.861-4.035 1.965-4.016.205-8.913-3.865-10.7h-.004a8.118 8.118 0 00-3.14-.706zm-.056 2.175a5.97 5.97 0 012.312.518l.008.002c2.95 1.29 4.23 4.822 2.791 7.758l-.004.008c-1.436 2.994-5.035 4.328-8.023 2.992l-.008-.004c-2.95-1.29-4.229-4.822-2.791-7.758l.004-.008c1.078-2.246 3.37-3.556 5.71-3.508z" fill="#2c7fb8"></path><path d="M101.904 61.837l-1.922 3.178 7.29 3.26 1.421-3.178z" fill="#2c7fb8"></path><path d="M93.914 116.833c4.549-1.681 6.945-6.648 5.351-11.092-1.594-4.446-6.572-6.686-11.121-5.005-4.549 1.68-6.945 6.647-5.353 11.091 1.594 4.446 6.574 6.686 11.121 5.006zM23.918 77.15c3.312-1.224 5.054-4.837 3.895-8.072-1.16-3.234-4.783-4.866-8.092-3.642-3.312 1.224-5.055 4.837-3.896 8.071 1.16 3.236 4.783 4.866 8.093 3.643zM112.44 20.8c3.31-1.223 5.054-4.837 3.894-8.07-1.16-3.236-4.782-4.866-8.092-3.643-3.311 1.223-5.054 4.837-3.896 8.072 1.16 3.235 4.783 4.866 8.094 3.642z" fill="#FF7F0E"></path><path d="M109.979 76.111l-10.354 18 3.018 1.737 10.353-18z" fill="#2c7fb8"></path>
+              </svg>
+            
+                <h3 class="h4 card-title mt-0">Networking</h3>
+                <p class="card-text">Massa donec quam orci feugiat. Quis iaculis facilisi ornare aenean lorem enim purus in lacus in ullamcorper diam consequat.</p>
+              </div>
+              <div class="card-footer border-0 py-3 my-3 mb-sm-4">
+                <button type="button" class="btn btn-primary">Engage</button>
+              </div></a></div>
+
+        </div>
+      </section>
+      <div class="container" style="width: 400px; ">
+
+     <div class="row">
+      <div class="col"><a class="card card-hover-primary border-0 h-100 text-decoration-none" href="linux/intro.html">
+        <div class="card-body pb-0">
+          
+     <img src="assets/img/linux-original.svg" alt="" style="width: auto; height: 150px;">
+      
+          <h3 class="h4 card-title mt-0">Linux basics</h3>
+          <p class="card-text">Massa donec quam orci feugiat. Quis iaculis facilisi ornare aenean lorem enim purus in lacus in ullamcorper diam consequat.</p>
+        </div>
+        <div class="card-footer border-0 py-3 my-3 mb-sm-4">
+          <button type="button" class="btn btn-primary">Engage</button>
+        </div></a></div>
+     </div>
+    
+    </div>
+    <div class="container">
+      <h3 class="text-center">Other Courses</h3>
+    <center>
+      <a href="#" class="btn btn-outline-primary btn-lg px-3 py-5">
+        <img src="assets/img/courses/php-original.svg" class="mx-1" width="136" alt="PHP">
+      </a>
+      <a href="#" class="btn btn-outline-primary btn-lg px-3 py-5">
+        <img src="assets/img/courses/bootstrap-original.svg" class="mx-1" width="135" alt="bootstrap">
+      </a>
+      <a href="#" class="btn btn-outline-primary btn-lg px-3 py-5">
+        <img src="assets/img/courses/react-original.svg" class="mx-1" width="136" alt="react">
+      </a>
+      <a href="#" class="btn btn-outline-primary btn-lg px-3 py-5">
+        <img src="assets/img/courses/csharp-original.svg" class="mx-1" width="136" alt="C#">
+      </a>
+      <a href="#" class="btn btn-outline-primary btn-lg px-3 py-5">
+        <img src="assets/img/courses/kotlin-original.svg" class="mx-1" width="136" alt="Kotlin">
+      </a>
+      <a href="#" class="btn btn-outline-primary btn-lg px-3 py-5">
+        <img src="assets/img/courses/wordpress-original.svg" class="mx-1" width="136" alt="wordpress">
+      </a>
+    </center>
+    </div>
+     
+    <!-- CTA-->
+  <section class="container pt-5 mt-lg-3 mt-xl-4 mt-xxl-5">
+    <div class="bg-primary rounded-5 overflow-hidden mt-2 mt-sm-4 mt-lg-5"><img class="position-absolute top-50 start-0 translate-middle-y d-none d-md-block" src="assets/img/landing/yoga-studio/cta/bg.svg" width="186" alt="Background flower">
+      <div class="row position-relative zindex-2 align-items-center">
+        <div class="col-md-6 col-lg-5 offset-lg-1">
+          <div class="text-center text-md-start py-5 px-4 px-sm-5 pe-md-0 ps-lg-4 ps-xl-5">
+            <div class="d-flex align-items-center justify-content-center justify-content-md-start mb-2"><span class="bg-white opacity-70 me-2 d-none d-md-block" style="width: 40px; height: 1px; margin-top: -1px;"></span><span class="fs-xs fw-semibold text-white opacity-70 text-uppercase">Special offer</span></div>
+            <h2 class="h1 text-white pb-2 pb-sm-3">Get 30% off when you buy a Live online class session</h2><a class="btn btn-outline-light fs-base" href="#">Buy a LOC</a>
+          </div>
+        </div>
+        <div class="col-md-6"><img class="d-block mx-auto mx-md-0 mt-n4 mt-md-0" src="assets/img/pccharm2.0.png" width="365" alt="Image"></div>
+      </div>
+    </div>
+  </section>
+     <!-------end of courses------>
+     <!-- testimonial----------- -->
+   <!-- Testimonials slider: Style 1 -->
+   <br><br>
+   <h3 class="h3 text-center">Testimonials</h3>
+<div class="card border-0 bg-secondary overflow-hidden">
+  <div class="card-body position-relative zindex-2 px-lg-0 py-lg-5">
+    <div class="row py-2 py-sm-1 py-md-3 py-lg-4 py-xl-5">
+      <div class="col-md-4 col-lg-3 offset-lg-1 mb-3 mb-md-0">
+      
+        <!-- Binded items-->
+        <div class="binded-content">
+
+          <!-- Item-->
+          <div class="binded-item active" id="author1"><img class="d-block rounded-circle mb-3" src="assets/img/avatar/212.jpg" width="86" alt="Lilianna Bocouse">
+            <h4 class="mb-0">Amir Lawan</h4>
+            <p class="fs-lg text-muted mb-0">CEO, Co-Founder</p>
+          </div>
+
+          <!-- Item-->
+          <div class="binded-item" id="author2"><img class="d-block rounded-circle mb-3" src="assets/img/avatar/33.jpg" width="86" alt="Darell Steward">
+            <h4 class="mb-0">Darell Steward</h4>
+            <p class="fs-lg text-muted mb-0">Project Manager</p>
+          </div>
+
+          <!-- Item-->
+          <div class="binded-item" id="author3"><img class="d-block rounded-circle mb-3" src="assets/img/avatar/34.jpg" width="86" alt="Annette Black">
+            <h4 class="mb-0">Annette Black</h4>
+            <p class="fs-lg text-muted mb-0">Lead Designer</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-8 col-lg-7">
+
+        <!-- Swiper slider-->
+        <div class="swiper" data-swiper-options='{
+          "spaceBetween": 40,
+          "loop": true,
+          "autoHeight": true,
+          "bindedContent": true,
+          "pagination": {
+            "el": "#testimonials-bullets",
+            "clickable": true
+          }
+        }'>
+          <div class="swiper-wrapper">
+
+            <!-- Item-->
+            <div class="swiper-slide" data-swiper-binded="#author1">
+              <p class="text-dark lead mb-0">“Around provides us with the detailed and accurate data we need to make strategic decisions. All tools are constantly being improved and contain a lot of useful and interesting information. Thanks to Around, we can constantly analyze our big data quickly and efficiently.”</p>
+            </div>
+
+            <!-- Item-->
+            <div class="swiper-slide" data-swiper-binded="#author2">
+              <p class="text-dark lead mb-0">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac pretium dui. Aliquam rutrum justo lorem, in efficitur odio efficitur vel. Integer mattis, neque malesuada sagittis porttitor, enim tortor ullamcorper diam, id eleifend sem mauris at turpis. Curabitur sed nisi nec ligula dictum maximus eu ut ante.”</p>
+            </div>
+
+            <!-- Item-->
+            <div class="swiper-slide" data-swiper-binded="#author3">
+              <p class="text-dark lead mb-0">“Quisque rutrum sit amet magna sit amet tristique. Vivamus rhoncus ac purus vitae convallis. Aliquam erat volutpat. Proin egestas, mauris ut semper semper, ipsum felis mattis ligula, et porttitor ante arcu nec ante. Aliquam congue est eu turpis sollicitudin, et ullamcorper tortor aliquam.”</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Swiper pagination (bullets)-->
+<div class="swiper-pagination position-relative bottom-0 pt-4 mt-2 mt-md-3" id="testimonials-bullets"></div>
+
+      <!-- end fo testimonial -->
+      <section class="pt-2 pt-md-0">
+        <div class="position-relative pt-lg-3 pt-xl-4 pt-xxl-5">
+          <div class="bg-primary position-absolute top-0 start-0 w-100 h-100 rounded-5 d-md-none" data-aos="zoom-in" data-aos-duration="700" data-aos-offset="300"></div>
+          <div class="bg-primary position-absolute top-0 start-0 w-100 h-100 d-none d-md-block" style="border-radius: 5rem 5rem 0 0;" data-aos="zoom-in" data-aos-duration="700" data-aos-offset="300"></div>
+          <div class="container dark-mode px-4 px-sm-5 px-md-0 position-relative zindex-2 pt-md-4 pt-lg-5 pb-sm-2 pb-md-3 pb-xl-4 pb-xxl-5">
+            <div class="row justify-content-center" data-aos="fade-up" data-aos-duration="500" data-aos-offset="300">
+              <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 text-center py-5">
+                <h2 class="display-1 mb-4">New Stage for your Learning</h2>
+                <p class="fs-xl pb-3 mb-3 mb-lg-4">Now you can start  live online class with a Minimum amount of something and enjoy 3-day free trial</p>
+                <div class="d-sm-flex justify-content-center"><a class="btn btn-lg btn-success rounded-pill w-100 w-sm-auto me-sm-4 mb-3 mb-sm-0" href="#">Start free 3-day trial</a><a class="btn btn-lg btn-outline-success rounded-pill w-100 w-sm-auto" href="#">Request Content</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="position-relative zindex-2 px-md-5"><img class="d-block d-dark-mode-none mx-auto" src="assets/img/landing/saas-2/dash-light.png" width="1076" alt="Image"><img class="d-none d-dark-mode-block mx-auto" src="assets/img/landing/saas-2/dash-dark.png" width="1076" alt="Image"></div>
+        </div>
+      </section>
+
+      
+
+
+
+
+
+  <!-- Footer-->
+  <footer class="footer pt-lg-5 pt-4 pb-5">
+    <div class="container pt-3 mt-md-2 mt-lg-3">
+      <div class="row gy-md-5 gy-4 mb-md-5 mb-4 pb-lg-2">
+        <div class="col-lg-3"><a class="navbar-brand d-inline-flex align-items-center mb-lg-4 mb-3" href="index-2.html"><span class="text-primary flex-shrink-0 me-2">
+          <img src="assets/img/pccharm2.0.png" alt="" width="35" height="32"></span><span class="text-nav">PcCharm</span></a>
+          <p class="mb-4 pb-lg-1 fs-xs text-muted" style="max-width: 306px;">PcCharm is prefered to give the expensive tutorial all just for free all you have to do is to give us your love and click the below link let us know what in you mind.</p>
+          <div class="mt-n3 ms-n3"><a class="btn btn-secondary btn-icon btn-sm btn-instagram rounded-circle mt-3 ms-3" href="#"><i class="ai-instagram"></i></a><a class="btn btn-secondary btn-icon btn-sm btn-facebook rounded-circle mt-3 ms-3" href="#"><i class="ai-facebook"></i></a><a class="btn btn-secondary btn-icon btn-sm btn-linkedin rounded-circle mt-3 ms-3" href="#"><i class="ai-linkedin"></i></a></div>
+        </div>
+        <div class="col-xl-8 offset-xl-1 col-lg-9">
+          <div class="row row-cols-sm-4 row-cols-1">
+            <div class="col">
+              <ul class="nav flex-column mb-0">
+                <li class="nav-item mb-2"><a class="nav-link p-0" href="#">Services</a></li>
+                <li class="nav-item mb-2"><a class="nav-link p-0" href="#">Industries</a></li>
+                <li class="nav-item mb-2"><a class="nav-link p-0" href="#">Clients</a></li>
+                <li class="nav-item mb-2"><a class="nav-link p-0" href="#">Reviews</a></li>
+                <li class="nav-item mb-2"><a class="nav-link p-0" href="#">Case studies</a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <ul class="nav flex-column mb-0">
+                <li class="nav-item mb-2"><a class="nav-link p-0" href="#">Contacts</a></li>
+                <li class="nav-item mb-2"><a class="nav-link p-0" href="#">Help center</a></li>
+                <li class="nav-item mb-2"><a class="nav-link p-0" href="#">Privacy policy</a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <ul class="nav flex-column mb-0">
+                <li class="nav-item mb-2"><a class="nav-link p-0" href="#">About</a></li>
+                <li class="nav-item mb-2"><a class="nav-link p-0" href="#">Careers</a></li>
+                <li class="nav-item mb-2"><a class="nav-link p-0" href="#">News &amp; insights</a></li>
+                <li class="nav-item mb-2"><a class="nav-link p-0" href="#">Industry forecasts</a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <ul class="nav flex-column mb-0">
+                <li class="nav-item mb-2"><a class="nav-link p-0" href="tel:+234 8144769889">+234 8144769889</a></li>
+                <li class="nav-item mb-2"><a class="nav-link p-0" href="tel:+2349134021641">+ 234 9134021641</a></li>
+                <li class="nav-item mb-2"><a class="text-primary fw-semibold p-0" href="mailto:reachPccharm@yahoo.com">reachPccharm@yahoo.com</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fs-sm text-muted">&copy; All rights reserved. Made by <a href='index.html' class='text-dark text-decoration-none opacity-90'>PcCharm</a></div>
+    </div>
+  </footer>
+
+
+     <!-- Back to top button--><a class="btn-scroll-top bg bg-blur" href="#top" data-scroll>
+        <svg viewBox="0 0 40 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"></circle>
+          </svg><i class="ai-arrow-up"></i></a>
+        <!-- Vendor scripts: js libraries and plugins-->
+        <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+        <script src="assets/vendor/parallax-js/dist/parallax.min.js"></script>
+        <script src="assets/vendor/aos/dist/aos.js"></script>
+        <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+        <script src="assets/vendor/%40lottiefiles/lottie-player/dist/lottie-player.js"></script>
+        <script src="assets/vendor/img-comparison-slider/dist/index.js"></script>
+        <!-- Main theme script-->
+        <script src="assets/js/theme.min.js"></script>
+        <!-- Customizer-->
+        <script>!function(){function e(e){return localStorage.getItem(e)}function r(e,r){localStorage.setItem(e,r)}var t=document.getElementById("customizer-styles"),n=document.getElementById("custom-generated-styles"),o=`\n    :root {\n      ${e("theme-primary")&&`--ar-primary: ${e("theme-primary")};`}\n      ${e("theme-primary-rgb")&&`--ar-primary-rgb: ${e("theme-primary-rgb")};`}\n      ${e("theme-warning")&&`--ar-warning-rgb: ${e("theme-warning")};`}\n      ${e("theme-warning-rgb")&&`--ar-warning-rgb: ${e("theme-warning-rgb")};`}\n      ${e("theme-info")&&`--ar-info-rgb: ${e("theme-info")};`}\n      ${e("theme-info-rgb")&&`--ar-info-rgb: ${e("theme-info-rgb")};`}\n      ${e("theme-success")&&`--ar-success-rgb: ${e("success-info")};`}\n      ${e("theme-success-rgb")&&`--ar-success-rgb: ${e("success-info-rgb")};`}\n      ${e("theme-danger")&&`--ar-danger-rgb: ${e("danger-info")};`}\n      ${e("theme-danger-rgb")&&`--ar-danger-rgb: ${e("danger-info-rgb")};`}\n      ${e("theme-font-family")&&`--ar-body-font-family: ${e("theme-font-family")};`}\n      ${e("theme-root-font-size")&&`--ar-root-font-size: ${e("theme-root-font-size")};`}\n      ${e("theme-body-font-size")&&`--ar-body-font-size: ${e("theme-body-font-size")};`}\n      ${e("theme-border-width")&&`--ar-border-width: ${e("theme-border-width")};`}\n      ${e("theme-border-radius")&&`--ar-border-radius: ${e("theme-border-radius")};`}\n      ${e("theme-border-radius-sm")&&`--ar-border-radius-sm: ${e("theme-border-radius-sm")};`}\n      ${e("theme-border-radius-lg")&&`--ar-border-radius-lg: ${e("theme-border-radius-lg")};`}\n      ${e("theme-border-radius-xl")&&`--ar-border-radius-xl: ${e("theme-border-radius-xl")};`}\n      ${e("theme-border-radius-2xl")&&`--ar-border-radius-2xl: ${e("theme-border-radius-2xl")};`}\n      ${e("theme-primary")&&`--ar-link-color: ${e("theme-primary")};`}\n      ${e("theme-primary-btn-hover-active-border-bg-color")&&`--ar-link-hover-color: ${e("theme-primary-btn-hover-active-border-bg-color")};`}\n    }\n    .btn-primary {\n      ${e("theme-primary")&&`--ar-btn-bg: ${e("theme-primary")};`}\n      ${e("theme-primary")&&`--ar-btn-border-color: ${e("theme-primary")};`}\n      ${e("theme-primary-btn-hover-active-border-bg-color")&&`--ar-btn-hover-bg: ${e("theme-primary-btn-hover-active-border-bg-color")};`}\n      ${e("theme-primary-btn-hover-active-border-bg-color")&&`--ar-btn-hover-border-color: ${e("theme-primary-btn-hover-active-border-bg-color")};`}\n      ${e("theme-primary-btn-hover-active-border-bg-color")&&`--ar-btn-active-bg: ${e("theme-primary-btn-hover-active-border-bg-color")};`}\n      ${e("theme-primary-btn-hover-active-border-bg-color")&&`--ar-btn-active-border-color: ${e("theme-primary-btn-hover-active-border-bg-color")};`}\n      ${e("theme-primary")&&`--ar-btn-disabled-bg: ${e("theme-primary")};`}\n      ${e("theme-primary")&&`--ar-btn-disabled-border-color: ${e("theme-primary")};`}\n    }\n    .btn-warning {\n      ${e("theme-warning")&&`--ar-btn-bg: ${e("theme-warning")};`}\n      ${e("theme-warning")&&`--ar-btn-border-color: ${e("theme-warning")};`}\n      ${e("theme-warning-btn-hover-active-border-bg-color")&&`--ar-btn-hover-bg: ${e("theme-warning-btn-hover-active-border-bg-color")};`}\n      ${e("theme-warning-btn-hover-active-border-bg-color")&&`--ar-btn-hover-border-color: ${e("theme-warning-btn-hover-active-border-bg-color")};`}\n      ${e("theme-warning-btn-hover-active-border-bg-color")&&`--ar-btn-active-bg: ${e("theme-warning-btn-hover-active-border-bg-color")};`}\n      ${e("theme-warning-btn-hover-active-border-bg-color")&&`--ar-btn-active-border-color: ${e("theme-warning-btn-hover-active-border-bg-color")};`}\n      ${e("theme-warning")&&`--ar-btn-disabled-bg: ${e("theme-warning")};`}\n      ${e("theme-warning")&&`--ar-btn-disabled-border-color: ${e("theme-warning")};`}\n    }\n    .btn-info {\n      ${e("theme-info")&&`--ar-btn-bg: ${e("theme-info")};`}\n      ${e("theme-info")&&`--ar-btn-border-color: ${e("theme-info")};`}\n      ${e("theme-info-btn-hover-active-border-bg-color")&&`--ar-btn-hover-bg: ${e("theme-info-btn-hover-active-border-bg-color")};`}\n      ${e("theme-info-btn-hover-active-border-bg-color")&&`--ar-btn-hover-border-color: ${e("theme-info-btn-hover-active-border-bg-color")};`}\n      ${e("theme-info-btn-hover-active-border-bg-color")&&`--ar-btn-active-bg: ${e("theme-info-btn-hover-active-border-bg-color")};`}\n      ${e("theme-info-btn-hover-active-border-bg-color")&&`--ar-btn-active-border-color: ${e("theme-info-btn-hover-active-border-bg-color")};`}\n      ${e("theme-info")&&`--ar-btn-disabled-bg: ${e("theme-info")};`}\n      ${e("theme-info")&&`--ar-btn-disabled-border-color: ${e("theme-info")};`}\n    }\n    .btn-success {\n      ${e("theme-success")&&`--ar-btn-bg: ${e("theme-success")};`}\n      ${e("theme-success")&&`--ar-btn-border-color: ${e("theme-success")};`}\n      ${e("theme-success-btn-hover-active-border-bg-color")&&`--ar-btn-hover-bg: ${e("theme-success-btn-hover-active-border-bg-color")};`}\n      ${e("theme-success-btn-hover-active-border-bg-color")&&`--ar-btn-hover-border-color: ${e("theme-success-btn-hover-active-border-bg-color")};`}\n      ${e("theme-success-btn-hover-active-border-bg-color")&&`--ar-btn-active-bg: ${e("theme-success-btn-hover-active-border-bg-color")};`}\n      ${e("theme-success-btn-hover-active-border-bg-color")&&`--ar-btn-active-border-color: ${e("theme-success-btn-hover-active-border-bg-color")};`}\n      ${e("theme-success")&&`--ar-btn-disabled-bg: ${e("theme-success")};`}\n      ${e("theme-success")&&`--ar-btn-disabled-border-color: ${e("theme-success")};`}\n    }\n    .btn-danger {\n      ${e("theme-danger")&&`--ar-btn-bg: ${e("theme-danger")};`}\n      ${e("theme-danger")&&`--ar-btn-border-color: ${e("theme-danger")};`}\n      ${e("theme-danger-btn-hover-active-border-bg-color")&&`--ar-btn-hover-bg: ${e("theme-danger-btn-hover-active-border-bg-color")};`}\n      ${e("theme-danger-btn-hover-active-border-bg-color")&&`--ar-btn-hover-border-color: ${e("theme-danger-btn-hover-active-border-bg-color")};`}\n      ${e("theme-danger-btn-hover-active-border-bg-color")&&`--ar-btn-active-bg: ${e("theme-danger-btn-hover-active-border-bg-color")};`}\n      ${e("theme-danger-btn-hover-active-border-bg-color")&&`--ar-btn-active-border-color: ${e("theme-danger-btn-hover-active-border-bg-color")};`}\n      ${e("theme-danger")&&`--ar-btn-disabled-bg: ${e("theme-danger")};`}\n      ${e("theme-danger")&&`--ar-btn-disabled-border-color: ${e("theme-danger")};`}\n    }\n    .btn-outline-primary {\n      ${e("theme-primary")&&`--ar-btn-color: ${e("theme-primary")};`}\n      ${e("theme-primary")&&`--ar-btn-border-color: ${e("theme-primary")};`}\n      ${e("theme-primary")&&`--ar-btn-hover-bg: ${e("theme-primary")};`}\n      ${e("theme-primary")&&`--ar-btn-hover-border-color: ${e("theme-primary")};`}\n      ${e("theme-primary")&&`--ar-btn-active-bg: ${e("theme-primary")};`}\n      ${e("theme-primary")&&`--ar-btn-active-border-color: ${e("theme-primary")};`}\n      ${e("theme-primary")&&`--ar-btn-disabled-color: ${e("theme-primary")};`}\n      ${e("theme-primary")&&`--ar-btn-disabled-border-color: ${e("theme-primary")};`}\n    }\n    .btn-outline-warning {\n      ${e("theme-warning")&&`--ar-btn-color: ${e("theme-warning")};`}\n      ${e("theme-warning")&&`--ar-btn-border-color: ${e("theme-warning")};`}\n      ${e("theme-warning")&&`--ar-btn-hover-bg: ${e("theme-warning")};`}\n      ${e("theme-warning")&&`--ar-btn-hover-border-color: ${e("theme-warning")};`}\n      ${e("theme-warning")&&`--ar-btn-active-bg: ${e("theme-warning")};`}\n      ${e("theme-warning")&&`--ar-btn-active-border-color: ${e("theme-warning")};`}\n      ${e("theme-warning")&&`--ar-btn-disabled-color: ${e("theme-warning")};`}\n      ${e("theme-warning")&&`--ar-btn-disabled-border-color: ${e("theme-warning")};`}\n    }\n    .btn-outline-info {\n      ${e("theme-info")&&`--ar-btn-color: ${e("theme-info")};`}\n      ${e("theme-info")&&`--ar-btn-border-color: ${e("theme-info")};`}\n      ${e("theme-info")&&`--ar-btn-hover-bg: ${e("theme-info")};`}\n      ${e("theme-info")&&`--ar-btn-hover-border-color: ${e("theme-info")};`}\n      ${e("theme-info")&&`--ar-btn-active-bg: ${e("theme-info")};`}\n      ${e("theme-info")&&`--ar-btn-active-border-color: ${e("theme-info")};`}\n      ${e("theme-info")&&`--ar-btn-disabled-color: ${e("theme-info")};`}\n      ${e("theme-info")&&`--ar-btn-disabled-border-color: ${e("theme-info")};`}\n    }\n    .btn-outline-success {\n      ${e("theme-success")&&`--ar-btn-color: ${e("theme-success")};`}\n      ${e("theme-success")&&`--ar-btn-border-color: ${e("theme-success")};`}\n      ${e("theme-success")&&`--ar-btn-hover-bg: ${e("theme-success")};`}\n      ${e("theme-success")&&`--ar-btn-hover-border-color: ${e("theme-success")};`}\n      ${e("theme-success")&&`--ar-btn-active-bg: ${e("theme-success")};`}\n      ${e("theme-success")&&`--ar-btn-active-border-color: ${e("theme-success")};`}\n      ${e("theme-success")&&`--ar-btn-disabled-color: ${e("theme-success")};`}\n      ${e("theme-success")&&`--ar-btn-disabled-border-color: ${e("theme-success")};`}\n    }\n    .btn-outline-danger {\n      ${e("theme-danger")&&`--ar-btn-color: ${e("theme-danger")};`}\n      ${e("theme-danger")&&`--ar-btn-border-color: ${e("theme-danger")};`}\n      ${e("theme-danger")&&`--ar-btn-hover-bg: ${e("theme-danger")};`}\n      ${e("theme-danger")&&`--ar-btn-hover-border-color: ${e("theme-danger")};`}\n      ${e("theme-danger")&&`--ar-btn-active-bg: ${e("theme-danger")};`}\n      ${e("theme-danger")&&`--ar-btn-active-border-color: ${e("theme-danger")};`}\n      ${e("theme-danger")&&`--ar-btn-disabled-color: ${e("theme-danger")};`}\n      ${e("theme-danger")&&`--ar-btn-disabled-border-color: ${e("theme-danger")};`}\n    }\n  `,a=o;a=o.replace(/null|\s*(?![A-Z])/g,"");t.append(a),a.split("}").map(function(e){-1!==e.indexOf("{--")&&n.append(e+"}")});var i={root:t.sheet.cssRules[0],primaryBtn:t.sheet.cssRules[1],warningBtn:t.sheet.cssRules[2],infoBtn:t.sheet.cssRules[3],successBtn:t.sheet.cssRules[4],dangerBtn:t.sheet.cssRules[5],primaryOutlineBtn:t.sheet.cssRules[6],warningOutlineBtn:t.sheet.cssRules[7],infoOutlineBtn:t.sheet.cssRules[8],successOutlineBtn:t.sheet.cssRules[9],dangerOutlineBtn:t.sheet.cssRules[10]};function b(){n.innerHTML=i.root.cssText.replace(/null|\s*(?![A-Z])/g,""),n.innerHTML+=-1===i.primaryBtn.cssText.indexOf("{ }")?i.primaryBtn.cssText.replace(/ /g,""):"",n.innerHTML+=-1===i.warningBtn.cssText.indexOf("{ }")?i.warningBtn.cssText.replace(/ /g,""):"",n.innerHTML+=-1===i.infoBtn.cssText.indexOf("{ }")?i.infoBtn.cssText.replace(/ /g,""):"",n.innerHTML+=-1===i.successBtn.cssText.indexOf("{ }")?i.successBtn.cssText.replace(/ /g,""):"",n.innerHTML+=-1===i.dangerBtn.cssText.indexOf("{ }")?i.dangerBtn.cssText.replace(/ /g,""):"",n.innerHTML+=-1===i.primaryOutlineBtn.cssText.indexOf("{ }")?i.primaryOutlineBtn.cssText.replace(/ /g,""):"",n.innerHTML+=-1===i.warningOutlineBtn.cssText.indexOf("{ }")?i.warningOutlineBtn.cssText.replace(/ /g,""):"",n.innerHTML+=-1===i.infoOutlineBtn.cssText.indexOf("{ }")?i.infoOutlineBtn.cssText.replace(/ /g,""):"",n.innerHTML+=-1===i.successOutlineBtn.cssText.indexOf("{ }")?i.successOutlineBtn.cssText.replace(/ /g,""):"",n.innerHTML+=-1===i.dangerOutlineBtn.cssText.indexOf("{ }")?i.dangerOutlineBtn.cssText.replace(/ /g,""):""}function s(e){var r=0,t=0,n=0;return 4==e.length?(r="0x"+e[1]+e[1],t="0x"+e[2]+e[2],n="0x"+e[3]+e[3]):7==e.length&&(r="0x"+e[1]+e[2],t="0x"+e[3]+e[4],n="0x"+e[5]+e[6]),+r+","+ +t+","+ +n}function c(e,r){var t=parseInt(e.replace("#",""),16),n=Math.round(2.55*r),o=(t>>16)+n,a=(t>>8&255)+n,i=(255&t)+n;return"#"+(16777216+65536*(o<255?o<1?0:o:255)+256*(a<255?a<1?0:a:255)+(i<255?i<1?0:i:255)).toString(16).slice(1)}for(var l=document.querySelectorAll("#theme-colors .color-swatch"),d=0;d<l.length;d++){var m=l[d].querySelector("label"),h=l[d].querySelector('input[type="color"]');colorInput=l[d].querySelector('input[type="text"]'),colorInput.value=e(l[d].id)||colorInput.value,h.value=e(l[d].id)||h.value,m.style.backgroundColor=e(l[d].id)||h.value,h.addEventListener("input",function(e){var n=e.target.parentElement.querySelector("label"),o=e.target.parentElement.querySelector('input[type="text"]'),a=e.target.value;t.sheet.cssRules[d+1];r("theme-"+e.target.id,a),r("theme-"+e.target.id+"-rgb",s(a)),r("theme-"+e.target.id+"-btn-hover-active-border-bg-color",c(a,-10)),n.style.backgroundColor=a,o.value=a,i.root.style.setProperty("--ar-"+e.target.id,a),i.root.style.setProperty("--ar-"+e.target.id+"-rgb",s(a)),i[e.target.id+"Btn"].style.setProperty("--ar-btn-bg",a),i[e.target.id+"Btn"].style.setProperty("--ar-btn-border-color",a),i[e.target.id+"Btn"].style.setProperty("--ar-btn-hover-bg",c(a,-10)),i[e.target.id+"Btn"].style.setProperty("--ar-btn-hover-border-color",c(a,-10)),i[e.target.id+"Btn"].style.setProperty("--ar-btn-active-bg",c(a,-10)),i[e.target.id+"Btn"].style.setProperty("--ar-btn-active-border-color",c(a,-10)),i[e.target.id+"Btn"].style.setProperty("--ar-btn-disabled-bg",a),i[e.target.id+"Btn"].style.setProperty("--ar-btn-disabled-border-color",a),i[e.target.id+"OutlineBtn"].style.setProperty("--ar-btn-color",a),i[e.target.id+"OutlineBtn"].style.setProperty("--ar-btn-border-color",a),i[e.target.id+"OutlineBtn"].style.setProperty("--ar-btn-hover-bg",a),i[e.target.id+"OutlineBtn"].style.setProperty("--ar-btn-hover-border-color",a),i[e.target.id+"OutlineBtn"].style.setProperty("--ar-btn-active-bg",a),i[e.target.id+"OutlineBtn"].style.setProperty("--ar-btn-active-border-color",a),i[e.target.id+"OutlineBtn"].style.setProperty("--ar-btn-disabled-color",a),i[e.target.id+"OutlineBtn"].style.setProperty("--ar-btn-disabled-border-color",a),"primary"===e.target.id&&(r("theme-link-hover-color",c(a,-10)),i.root.style.setProperty("--ar-link-color",a),i.root.style.setProperty("--ar-link-hover-color",c(a,-10))),b()}),colorInput.addEventListener("change",function(e){var t=e.target.parentElement.querySelector("label"),n=e.target.parentElement.querySelector('input[type="color"]'),o=e.target.value;0!=o.length&&o.startsWith("#")&&(r("theme-"+n.id,o),r("theme-"+n.id+"-rgb",s(o)),r("theme-"+n.id+"-btn-hover-active-border-bg-color",c(o,-10)),t.style.backgroundColor=o,n.value=o,i.root.style.setProperty("--ar-"+n.id,o),i.root.style.setProperty("--ar-"+n.id+"-rgb",s(o)),i[n.id+"Btn"].style.setProperty("--ar-btn-bg",o),i[n.id+"Btn"].style.setProperty("--ar-btn-border-color",o),i[n.id+"Btn"].style.setProperty("--ar-btn-hover-bg",c(o,-10)),i[n.id+"Btn"].style.setProperty("--ar-btn-hover-border-color",c(o,-10)),i[n.id+"Btn"].style.setProperty("--ar-btn-active-bg",c(o,-10)),i[n.id+"Btn"].style.setProperty("--ar-btn-active-border-color",c(o,-10)),i[n.id+"Btn"].style.setProperty("--ar-btn-disabled-bg",o),i[n.id+"Btn"].style.setProperty("--ar-btn-disabled-border-color",o),i[n.id+"OutlineBtn"].style.setProperty("--ar-btn-color",o),i[n.id+"OutlineBtn"].style.setProperty("--ar-btn-border-color",o),i[n.id+"OutlineBtn"].style.setProperty("--ar-btn-hover-bg",o),i[n.id+"OutlineBtn"].style.setProperty("--ar-btn-hover-border-color",o),i[n.id+"OutlineBtn"].style.setProperty("--ar-btn-active-bg",o),i[n.id+"OutlineBtn"].style.setProperty("--ar-btn-active-border-color",o),i[n.id+"OutlineBtn"].style.setProperty("--ar-btn-disabled-color",o),i[n.id+"OutlineBtn"].style.setProperty("--ar-btn-disabled-border-color",o),"primary"===n.id&&(r("theme-link-hover-color",c(o,-10)),i.root.style.setProperty("--ar-link-color",o),i.root.style.setProperty("--ar-link-hover-color",c(o,-10))),b())})}var g=document.getElementById("font-url"),u=document.getElementById("google-font");u.href=e("theme-font-url")||g.value,g.value=e("theme-font-url")||g.value,g.addEventListener("blur",function(e){var t=e.target.value;r("theme-font-url",t),u.href=t});var v=document.getElementById("body-font-family");v.value=e("theme-font-family")||v.value,v.addEventListener("blur",function(e){var t=e.target.value;r("theme-font-family",t),i.root.style.setProperty("--ar-body-font-family",t),b()});var $=document.getElementById("root-font-size");$.value=e("theme-root-font-size")||$.value,$.addEventListener("change",function(e){var t=e.target.value;r("theme-root-font-size",t),i.root.style.setProperty("--ar-root-font-size",t),b()});var y=document.getElementById("body-font-size");y.value=e("theme-body-font-size")||y.value,y.addEventListener("change",function(e){var t=e.target.value;r("theme-body-font-size",t),i.root.style.setProperty("--ar-body-font-size",t),b()});var p=document.getElementById("border-width");p.value=parseInt(e("theme-border-width"))||p.value,p.addEventListener("input",function(e){var t=e.target.value;r("theme-border-width",t+"px"),i.root.style.setProperty("--ar-border-width",t+"px"),b()});var f=document.getElementById("border-radius");f.value=parseFloat(e("theme-border-radius"))||f.value,f.addEventListener("input",function(e){var t=e.target.value;r("theme-border-radius",t+"rem"),i.root.style.setProperty("--ar-border-radius",t+"rem"),b()});var B=document.querySelectorAll('#theme-border-radiuses input[type="number"');for(d=0;d<B.length;d++)B[d].value=e("theme-"+B[d].id+"multiplier")||B[d].value,B[d].addEventListener("input",function(e){var t=e.target.value;r("theme-"+e.target.id,"calc(var(--ar-border-radius) * "+t+")"),r("theme-"+e.target.id+"multiplier",t),i.root.style.setProperty("--ar-"+e.target.id,"calc(var(--ar-border-radius) * "+t+")"),b()});var w=document.getElementById("customizer"),x=document.getElementById("customizer-btns");e("theme-customizer-btns")&&x.classList.remove("d-none"),w.addEventListener("change",function(e){r("theme-customizer-btns",!0),x.classList.remove("d-none")}),document.getElementById("customizer-reset-btn").addEventListener("click",function(){for(var e=[],r=0;r<localStorage.length;r++)"theme"==localStorage.key(r).substring(0,5)&&e.push(localStorage.key(r));for(r=0;r<e.length;r++)localStorage.removeItem(e[r]);window.location.reload()});var P=document.getElementById("copy-styles-btn");P.addEventListener("click",function(){var e=document.createRange();e.selectNode(n),window.getSelection().removeAllRanges(),window.getSelection().addRange(e),navigator.clipboard.writeText(n.innerHTML),this.innerHTML='<i class="ai-check me-2 ms-n1"></i>Copied!',setTimeout(function(){P.innerHTML='<i class="ai-copy me-2 ms-n1"></i>Copy styles'},2e3)})}();</script>
+      
+    
+</body>
+</html>
