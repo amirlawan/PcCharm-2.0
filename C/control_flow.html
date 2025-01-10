@@ -203,149 +203,74 @@
       
     </header>
 
-     
       <!-- Desktop sidebar navigation (on screens > 991px) (Offcanvas)-->
-<aside class="container position-fixed d-none d-lg-block start-50 translate-middle-x h-100 pt-5">
-  <div class="row h-100 pt-5">
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item">
-          <a href="../index.html"><i class="ai-home fs-base"></i></a>
-        </li>
-        <li class="breadcrumb-item"><a href="../index.html">Courses</a></li>
-        <li class="breadcrumb-item active" aria-current="page">C Programming</li>
-      </ol>
-    </nav>
-    <div class="col-lg-3 d-flex flex-column pb-3 pt-4" style="height: calc(100% - 2rem);">
-      <div class="h-100 mt-2" data-simplebar>
-        <h3 class="h5 mb-1 pb-2">Table of Contents</h3>
-        <ul class="nav flex-column">
-          <li class="nav-item"><span class="nav-link px-0 py-2"><i class="ai-circle-arrow-down fs-lg opacity-90 me-2"></i>Introduction to C Programming</span>
-            <ul class="nav flex-column border-start ps-3 ms-2 mb-2">
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#what-is-c-programming" data-scroll="data-scroll">What is C Programming?</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#why-learn-c" data-scroll="data-scroll">Why Learn C?</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#overview-c-compiler-ide" data-scroll="data-scroll">Overview of C Compiler and IDE</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#structure-c-program" data-scroll="data-scroll">Structure of a C Program</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#first-c-program" data-scroll="data-scroll">Writing Your First C Program ("Hello, World!")</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#compiling-running-c-program" data-scroll="data-scroll">Compiling and Running a C Program</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><span class="nav-link px-0 py-2"><i class="ai-circle-arrow-down fs-lg opacity-90 me-2"></i>Basic Syntax in C</span>
-            <ul class="nav flex-column border-start ps-3 ms-2 mb-2">
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#keywords-c" data-scroll="data-scroll">Keywords in C</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#identifiers-variables" data-scroll="data-scroll">Identifiers and Variables</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#data-types-c" data-scroll="data-scroll">Data Types in C</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#constants-c" data-scroll="data-scroll">Constants in C</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#operators-c" data-scroll="data-scroll">Operators in C</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#comments-c" data-scroll="data-scroll">Comments in C</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#input-output-c" data-scroll="data-scroll">Input and Output in C</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><span class="nav-link px-0 py-2 active"><i class="ai-circle-arrow-down fs-lg opacity-90 me-2"></i>Control Flow</span>
-            <ul class="nav flex-column border-start ps-3 ms-2 mb-2">
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#conditional-statements" data-scroll="data-scroll">Conditional Statements</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#switch-case" data-scroll="data-scroll">Switch Case</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#looping-c" data-scroll="data-scroll">Looping (for, while, do-while)</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#break-continue" data-scroll="data-scroll">Break and Continue</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><span class="nav-link px-0 py-2"><i class="ai-circle-arrow-down fs-lg opacity-90 me-2"></i>Functions in C</span>
-            <ul class="nav flex-column border-start ps-3 ms-2 mb-2">
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#defining-functions" data-scroll="data-scroll">Defining Functions</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#function-arguments-return" data-scroll="data-scroll">Function Arguments and Return Types</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#function-overloading-recursion" data-scroll="data-scroll">Function Overloading and Recursion</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#scope-lifetime" data-scroll="data-scroll">Scope and Lifetime of Variables</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#built-in-functions" data-scroll="data-scroll">Built-in Functions</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><span class="nav-link px-0 py-2"><i class="ai-circle-arrow-down fs-lg opacity-90 me-2"></i>Arrays and Strings</span>
-            <ul class="nav flex-column border-start ps-3 ms-2 mb-2">
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#introduction-arrays" data-scroll="data-scroll">Introduction to Arrays</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#declaring-arrays" data-scroll="data-scroll">Declaring and Initializing Arrays</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#multidimensional-arrays" data-scroll="data-scroll">Multidimensional Arrays</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#introduction-strings" data-scroll="data-scroll">Introduction to Strings</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#string-manipulation" data-scroll="data-scroll">String Manipulation Functions</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><span class="nav-link px-0 py-2"><i class="ai-circle-arrow-down fs-lg opacity-90 me-2"></i>Pointers</span>
-            <ul class="nav flex-column border-start ps-3 ms-2 mb-2">
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#what-are-pointers" data-scroll="data-scroll">What are Pointers?</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#declaring-using-pointers" data-scroll="data-scroll">Declaring and Using Pointers</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#pointer-arithmetic" data-scroll="data-scroll">Pointer Arithmetic</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#functions-pointers" data-scroll="data-scroll">Functions and Pointers</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#pointers-to-pointers" data-scroll="data-scroll">Pointers to Pointers</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><span class="nav-link px-0 py-2"><i class="ai-circle-arrow-down fs-lg opacity-90 me-2"></i>Structures and Unions</span>
-            <ul class="nav flex-column border-start ps-3 ms-2 mb-2">
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#introduction-structures" data-scroll="data-scroll">Introduction to Structures</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#defining-structures" data-scroll="data-scroll">Defining and Using Structures</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#array-structures" data-scroll="data-scroll">Array of Structures</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#introduction-unions" data-scroll="data-scroll">Introduction to Unions</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#structures-unions-differences" data-scroll="data-scroll">Differences Between Structures and Unions</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><span class="nav-link px-0 py-2"><i class="ai-circle-arrow-down fs-lg opacity-90 me-2"></i>Dynamic Memory Allocation</span>
-            <ul class="nav flex-column border-start ps-3 ms-2 mb-2">
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#memory-management" data-scroll="data-scroll">Introduction to Memory Management</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#malloc-free" data-scroll="data-scroll">malloc() and free()</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#calloc-realloc" data-scroll="data-scroll">calloc() and realloc()</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#memory-leaks" data-scroll="data-scroll">Memory Leaks and Memory Management Best Practices</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><span class="nav-link px-0 py-2"><i class="ai-circle-arrow-down fs-lg opacity-90 me-2"></i>File Handling in C</span>
-            <ul class="nav flex-column border-start ps-3 ms-2 mb-2">
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#file-handling" data-scroll="data-scroll">Opening and Closing Files</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#reading-writing-files" data-scroll="data-scroll">Reading and Writing to Files</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#file-operations" data-scroll="data-scroll">File Operations (fgetc, fputc, fscanf, fprintf)</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#error-handling" data-scroll="data-scroll">Error Handling with Files</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><span class="nav-link px-0 py-2"><i class="ai-circle-arrow-down fs-lg opacity-90 me-2"></i>Advanced C Topics</span>
-            <ul class="nav flex-column border-start ps-3 ms-2 mb-2">
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#preprocessor-directives" data-scroll="data-scroll">Preprocessor Directives</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#header-modular" data-scroll="data-scroll">Header Files and Modular Programming</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#command-line-arguments" data-scroll="data-scroll">Command-line Arguments</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#bitwise-operators" data-scroll="data-scroll">Bitwise Operators</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#c-standard-library" data-scroll="data-scroll">C Standard Library Functions</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><span class="nav-link px-0 py-2"><i class="ai-circle-arrow-down fs-lg opacity-90 me-2"></i>Debugging and Best Practices</span>
-            <ul class="nav flex-column border-start ps-3 ms-2 mb-2">
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#debugging-techniques" data-scroll="data-scroll">Debugging Techniques</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#writing-maintainable" data-scroll="data-scroll">Writing Readable and Maintainable Code</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#error-handling-exception" data-scroll="data-scroll">Error Handling and Exception Handling</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#c-programming-style" data-scroll="data-scroll">C Programming Style Guidelines</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><span class="nav-link px-0 py-2"><i class="ai-circle-arrow-down fs-lg opacity-90 me-2"></i>Introduction to Data Structures and Algorithms</span>
-            <ul class="nav flex-column border-start ps-3 ms-2 mb-2">
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#data-structures-intro" data-scroll="data-scroll">Introduction to Arrays, Linked Lists, Stacks, and Queues</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#sorting-searching-algorithms" data-scroll="data-scroll">Sorting and Searching Algorithms</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#complexity-analysis" data-scroll="data-scroll">Complexity Analysis (Big O Notation)</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><span class="nav-link px-0 py-2"><i class="ai-circle-arrow-down fs-lg opacity-90 me-2"></i>C Programming Projects for Beginners</span>
-            <ul class="nav flex-column border-start ps-3 ms-2 mb-2">
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#simple-calculator" data-scroll="data-scroll">Simple Calculator</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#bank-account-management" data-scroll="data-scroll">Bank Account Management System</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#tic-tac-toe-game" data-scroll="data-scroll">Tic-Tac-Toe Game</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#student-record-management" data-scroll="data-scroll">Student Record Management System</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#file-encryption-program" data-scroll="data-scroll">File Encryption Program</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><span class="nav-link px-0 py-2"><i class="ai-circle-arrow-down fs-lg opacity-90 me-2"></i>Conclusion</span>
-            <ul class="nav flex-column border-start ps-3 ms-2 mb-2">
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#review-key-concepts" data-scroll="data-scroll">Review of Key Concepts Learned</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#further-resources" data-scroll="data-scroll">Further Resources for Learning C</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#best-practices-c" data-scroll="data-scroll">Best Practices for Becoming a C Programmer</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</aside>
+      <aside class="container position-fixed d-none d-lg-block start-50 translate-middle-x h-100 pt-5">
+        <div class="row h-100 pt-5">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="../index.html"><i class="ai-home fs-base"></i></a>
+              </li>
+              <li class="breadcrumb-item"><a href="../index.html">Courses</a></li>
+              <li class="breadcrumb-item active" aria-current="page">C Programming</li>
+            </ol>
+          </nav>
+          <div class="col-lg-3 d-flex flex-column pb-3 pt-4" style="height: calc(100% - 2rem);">
+            <div class="h-100 mt-2" data-simplebar>
+              <h3 class="h5 mb-1 pb-2">Content</h3>
+              <ul class="nav flex-column">
+                <li class="nav-item" id="icons"><a class="nav-link px-0 py-2" href="../C/intro.html"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Introduction</a>
+                </li>
+                <li class="nav-item" id="code"><a class="nav-link px-0 py-2" href="../C/basic_syntax.html"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2">Basic Syntax in C</i></a>
+                </li><!-- ----------------#active --------------->
+                <li class="nav-item"><span class="nav-link px-0 py-2 active"><i class="ai-circle-arrow-down fs-lg opacity-90 me-2">Control Flow</i></span>
+                  <ul class="nav flex-column border-start ps-3 ms-2 mb-2">
+                    <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#keywords" data-scroll="data-scroll">Keywords in C</a></li>
+                    <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#identifiers" data-scroll="data-scroll">identifiers</a></li>
+                    <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#variables" data-scroll="data-scroll">Variables</a></li>
+                    <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#data-types" data-scroll="data-scroll"> Data Types</a></li>
+                    <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#constants" data-scroll="data-scroll">Constants</a></li>
+                    <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#operators" data-scroll="data-scroll">Operators</a></li>
+                    <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#io" data-scroll="data-scroll">Input/Output Fundamentals</a></li>
+                    </ul>
+                </li>
+            <!-------------#end active------------->
+
+                <li class="nav-item" id="imgs"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Functions in C</a>
+                </li>
+                <li class="nav-item" id="tables"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Arrays and Strings</a>
+                </li>
+                <li class="nav-item" id="accordion"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Pointers</a>
+                </li>
+                <li class="nav-item" id="alerts"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Structures and Unions</a>
+                </li>
+                <li class="nav-item" id="badges"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Dynamic Memory Allocation</a>
+                </li>
+                <li class="nav-item" id="blog"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>File Handling in C</a>
+                </li>
+                <li class="nav-item" id="breadcrumb"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Advanced C Topics</a>
+                </li>
+                <li class="nav-item" id="btns"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Debugging and Best Practices</a>
+                </li>
+                <li class="nav-item" id="btn-group"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Introduction to Data Structures and Algorithms</a>
+                </li>
+                <li class="nav-item" id="cards-basic"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>C Programming Projects for Beginners</a>
+                </li>
+                <li class="nav-item" id="cards-hover"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Conclusion</a>
+                </li>
+              </ul>
+              <h3 class="h5 mb-1 pt-4 pb-2">Practice and test</h3>
+              <ul class="nav flex-column mb-0">
+                <li class="nav-item"><a class="nav-link px-0 py-2" href="#" target="_blank" rel="noopener"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Practice Test</a></li>
+              </ul>
+              <ul class="nav flex-column">
+                <li class="nav-item" id="utils"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>FAQs</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </aside>
   
     <!-- Mobile offcanvas navigation (on screens < 992px)-->
     <div class="offcanvas offcanvas-start" id="componentsNav">
@@ -356,102 +281,66 @@
         <button class="btn-close" type="button" data-bs-dismiss="offcanvas"></button>
       </div>
       <ul class="nav flex-column border-bottom pb-4">
-        <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="dropdown"><i class="ai-monitor fs-lg opacity-90 me-2"></i>Tutorials   <div class="dropdown-menu my-1">
-            <a href="#" class="dropdown-item">Action</a>
-            <a href="#" class="dropdown-item">Another action</a>
-            <a href="../html/intro.html" class="dropdown-item">HTML</a>
-            <a href="#" class="dropdown-item">CSS</a>
-            <a href="#" class="dropdown-item">JavaScript</a>
-            <a href="#" class="dropdown-item">JAVA</a>
-            <a href="#" class="dropdown-item">Python</a>
-            <a href="#" class="dropdown-item" >C programming</a>
-            <a href="#" class="dropdown-item">SQL</a>
-            <a href="#" class="dropdown-item">Penetration Testing</a>
-            <a href="#" class="dropdown-item">Networking</a>
-            <a href="../linux/intro.html"class="dropdown-item">Linux basics</a>
-          </div></a></li>
-        <li class="nav-item"><a class="nav-link" href="#"><i class="ai-file-text fs-lg opacity-90 me-2"></i>References</a></li>
-        <li class="nav-item"><a class="nav-link" href="file:///C:/Users/Amir%20Lawan/Downloads/development/Blogism/MyBlog/index.html">Blog</a></li>
-        
+        <li class="nav-item"><a class="nav-link py-2" href="../index.html"><i class="ai-home fs-lg opacity-90 me-2"></i>Home</a></li>
+        <li class="nav-item"><a class="nav-link py-2" href="#"><i class="ai-file-text fs-lg opacity-90 me-2"></i>References</a></li>
+        <li class="nav-item"><a class="nav-link py-2" href="#"><i class="ai-blog fs-lg opacity-90 me-2"></i>Blog</a></li>
       </ul>
       <div class="offcanvas-body">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-              <a href="../index.html"><i class="ai-home fs-base"></i></a>
-            </li>
-            <li class="breadcrumb-item"><a href="../index.html">Courses</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Linux Basics</li>
-          </ol>
-        </nav>
         <h3 class="h5 mb-1 pb-2">Content</h3>
         <ul class="nav flex-column">
-          <li class="nav-item"><span class="nav-link px-0 py-2 active"><i class="ai-circle-arrow-down fs-lg opacity-90 me-2"></i>Introduction</span>
+          <li class="nav-item" id="icons"><a class="nav-link px-0 py-2" href="../C/intro.html"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Introduction</a>
+          </li>
+          
+          <li class="nav-item" id="code"><a class="nav-link px-0 py-2" href=""><i class="ai-circle-arrow-right fs-lg opacity-90 me-2">Basic Syntax in C</i></a></li>
+          <!-- ----------------#active --------------->
+          <li class="nav-item"><span class="nav-link px-0 py-2 active"><i class="ai-circle-arrow-down fs-lg opacity-90 me-2">Control Flow</i></span>
             <ul class="nav flex-column border-start ps-3 ms-2 mb-2">
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#what is linux" data-scroll="data-scroll">What is Linux?</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#Brief history Linux" data-scroll="data-scroll">Brief History of Linux</a></li>
-              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#Advantages of Linux:" data-scroll="data-scroll">Advantages of Linux</a></li>
-            </ul>
+              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#keywords" data-scroll="data-scroll">Keywords in C</a></li>
+              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#identifiers" data-scroll="data-scroll">identifiers</a></li>
+              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#variables" data-scroll="data-scroll">Variables</a></li>
+              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#data-types" data-scroll="data-scroll"> Data Types</a></li>
+              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#constants" data-scroll="data-scroll">Constants</a></li>
+              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#operators" data-scroll="data-scroll">Operators</a></li>
+              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#io" data-scroll="data-scroll">Input/Output Fundamentals</a></li>
+              </ul>
           </li>
-         
+      <!-------------#end active------------->
+          <li class="nav-item" id="imgs"><a class="nav-link px-0 py-2" href=""><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Functions in C</a>
+          </li>
+          <li class="nav-item" id="tables"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Arrays and Strings</a>
+          </li>
+          <li class="nav-item" id="accordion"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Pointers</a>
+          </li>
+          <li class="nav-item" id="alerts"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Structures and Unions</a>
+          </li>
+          <li class="nav-item" id="badges"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Dynamic Memory Allocation</a>
+          </li>
+          <li class="nav-item" id="blog"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>File Handling in C</a>
+          </li>
+          <li class="nav-item" id="breadcrumb"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Advanced C Topics</a>
+          </li>
+          <li class="nav-item" id="btns"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Debugging and Best Practices</a>
+          </li>
+          <li class="nav-item" id="btn-group"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Introduction to Data Structures and Algorithms</a>
+          </li>
+          <li class="nav-item" id="cards-basic"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>C Programming Projects for Beginners</a>
+          </li>
+          <li class="nav-item" id="cards-hover"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Conclusion</a>
+          </li>
         </ul>
-        <h3 class="h5 mb-1 pt-4 pb-2">Getting Started</h3>
+        <h3 class="h5 mb-1 pt-4 pb-2">Practice and test</h3>
+        <ul class="nav flex-column mb-0">
+          <li class="nav-item"><a class="nav-link px-0 py-2" href="#" target="_blank" rel="noopener"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Practice Test</a></li>
+        </ul>
         <ul class="nav flex-column">
-          <li class="nav-item" id="structure"><a class="nav-link px-0 py-2" href="../linux/getting started.html"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Downloading Linux</a>
+          <li class="nav-item" id="utils"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>FAQs</a>
           </li>
-          <li class="nav-item" id="structure"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Installation</a>
-          </li>
-          <li class="nav-item" id="structure"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Accessing the CLI</a>
-          </li>
-          <li class="nav-item" id="structure"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Basic Commands and Syntax</a>
-          </li>
-         
-        <h3 class="h5 mb-1 pt-4 pb-2">Filesystem</h3>
-        <li class="nav-item" id="structure"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Filesystem Overview</a></li>
-        <li class="nav-item" id="structure"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Navigating and Managing Directories</a></li>
-        <li class="nav-item" id="structure"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Creating, Copying, Moving, and Deleting Files and Directories</a></li>
-        <li class="nav-item" id="structure"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Input Tags</a></li>
-        <li class="nav-item" id="structure"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Button Tags</a>
-        </li>
-        <h3 class="h5 mb-1 pt-4 pb-2">Users and Permissions</h3>
-        <li class="nav-item" id="structure"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>User Management</a></li>
-        <li class="nav-item" id="structure"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>File and Directory Permissions</a></li>
-        <li class="nav-item" id="structure"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Understanding User Groups</a></li>
-
-        <h3 class="h5 mb-1 pt-4 pb-2">Package Management</h3>
-        <li class="nav-item" id="structure"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Overview of Package Management</a></li>
-        <li class="nav-item" id="structure"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Updating Packages</a></li>
-        <li class="nav-item" id="structure"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Installing Packages</a></li>
-        <li class="nav-item" id="structure"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Uninstalling Packages</a></li>
-        <li class="nav-item" id="structure"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Managing Repositories</a></li>
-
-        <h3 class="h5 mb-1 pt-4 pb-2">Text Editors</h3>
-        <li class="nav-item" id="structure"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Text Editors Overview</a></li>
-        <li class="nav-item" id="structure"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Using Vim</a></li>
-        <li class="nav-item" id="structure"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Using Nano</a></li>
-        <li class="nav-item" id="structure"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Using Emacs</a></li>
-
-        <h3 class="h5 mb-1 pt-4 pb-2">Networking</h3>
-        <li class="nav-item" id="structure"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Connecting to the Internet</a></li>
-        <li class="nav-item" id="structure"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Configuring Network Settings</a></li>
-        <li class="nav-item" id="structure"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Basic Network Troubleshooting</a></li>
-        
-        <h3 class="h5 mb-1 pt-4 pb-2">System Administration</h3>
-        <li class="nav-item" id="structure"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Managing Services and Daemons</a></li>
-        <li class="nav-item" id="structure"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Managing System Resources</a></li>
-        <li class="nav-item" id="structure"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Backup and Recovery</a></li>
-
-        <h3 class="h5 mb-1 pt-4 pb-2">Security</h3>
-        <li class="nav-item" id="structure"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Understanding Linux Security</a></li>
-        <li class="nav-item" id="structure"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Configuring Firewall Rules</a></li>
-        <li class="nav-item" id="structure"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Securing Remote Access</a></li>
-        
-        <h3 class="h5 mb-1 pt-4 pb-2">Conclusion</h3>
         </ul>
-        </div>
-        
-        <div class="offcanvas-header border-top"><a class="btn btn-primary w-100" href="#"><i class="ai-login d-sm-inline-block fs-xl me-2 ms-n1"></i>Sign Up</a></div>
+      </div>
+      <div class="offcanvas-header border-top"><a class="btn btn-primary w-100" href="#"><i class="ai-login d-sm-inline-block fs-xl me-2 ms-n1"></i>Sign Up</a></div>
     </div>
+   
+   
    
    
 

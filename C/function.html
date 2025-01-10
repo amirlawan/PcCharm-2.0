@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="utf-8">
+    <title>PcCharm | Function in C</title>
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="Around - Multipurpose Bootstrap HTML Template">
+    <meta name="keywords" content="bootstrap, business, corporate, coworking space, services, creative agency, dashboard, e-commerce, mobile app showcase, saas, multipurpose, product landing, shop, software, ui kit, web studio, landing, dark mode, html5, css3, javascript, gallery, slider, touch, creative">
+    <meta name="author" content="Createx Studio">
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/pccharm2.0.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/pccharm2.0.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/pccharm2.0.png">
+    <link rel="manifest" href="../assets/img/pccharm2.0.png">
+    <link rel="mask-icon" color="#6366f1" href="../assets/img/pccharm2.0.png">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" content="../assets/img/pccharm2.0.png">
+    <meta name="theme-color" content="white">
+    <!-- Theme mode-->
+    <script>
+      let mode = window.localStorage.getItem('mode'),
+          root = document.getElementsByTagName('html')[0];
+      if (mode !== undefined && mode === 'dark') {
+        root.classList.add('dark-mode');
+      } else {
+        root.classList.remove('dark-mode');
+      }
+      
+      
+    </script>
+    <!-- Page loading styles-->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .dark-mode .page-loading {
+        background-color: #121519;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-family: 'Inter', sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #6f788b;
+      }
+      .dark-mode .page-loading-inner > span {
+        color: #fff;
+        opacity: .6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        background-color: #d7dde2; 
+        border-radius: 50%;
+        opacity: 0;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      .dark-mode .page-spinner {
+        background-color: rgba(255,255,255,.25);
+      }
+      @-webkit-keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+      @keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+      
+    </style>
+    <!-- Page loading scripts-->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 1500);
+        };
+      })();
+      
+    </script>
+    <!-- Import Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" id="google-font">
+    <!-- Vendor styles-->
+    <link rel="stylesheet" media="screen" href="../assets/vendor/simplebar/dist/simplebar.min.css"/>
+    <link rel="stylesheet" media="screen" href="../assets/vendor/prismjs/themes/prism.css"/>
+    <link rel="stylesheet" media="screen" href="../assets/vendor/prismjs/plugins/toolbar/prism-toolbar.css"/>
+    <link rel="stylesheet" media="screen" href="../assets/vendor/prismjs/plugins/line-numbers/prism-line-numbers.css"/>
+    <!-- Main Theme Styles + Bootstrap-->
+   
+    <link rel="stylesheet" href="../assets/vendor/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../assets\css\theme.min.css">
+    <style>
+        :root{--ar-primary:#5e28c3;--ar-primary-rgb:94,40,195;--ar-link-color:#5e28c3;--ar-link-hover-color:#450faa;}.btn-primary{--ar-btn-bg:#5e28c3;--ar-btn-border-color:#5e28c3;--ar-btn-hover-bg:#450faa;--ar-btn-hover-border-color:#450faa;--ar-btn-active-bg:#450faa;--ar-btn-active-border-color:#450faa;--ar-btn-disabled-bg:#5e28c3;--ar-btn-disabled-border-color:#5e28c3;}.btn-outline-primary{--ar-btn-color:#5e28c3;--ar-btn-border-color:#5e28c3;--ar-btn-hover-bg:#5e28c3;--ar-btn-hover-border-color:#5e28c3;--ar-btn-active-bg:#5e28c3;--ar-btn-active-border-color:#5e28c3;--ar-btn-disabled-color:#5e28c3;--ar-btn-disabled-border-color:#5e28c3;}
+    </style>
+</head>
+<body>
+ <header class="navbar navbar-expand justify-content-end fixed-top" data-scroll-header>
+      <div class="container"><a class="navbar-brand pe-xl-2 me-4" href="../index.html"><span class="text-primary flex-shrink-0 me-2">
+        <img src="../assets/img/pccharm2.0.png" alt="" height="32" width="35">  
+      </span>PcCharm<span class="badge bg-danger fs-sm ms-2">Linux</span></a>
+        <ul class="navbar-nav d-none d-lg-flex me-auto">
+            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown" aria-expanded="false">Tutorials</a>
+                <div class="dropdown-menu overflow-hidden p-0">
+                  <div class="d-lg-flex">
+                    <div class="mega-dropdown-column pt-1 pt-lg-3 pb-lg-4">
+                      <ul class="list-unstyled mb-0">
+                        <h3>All Courses</h3>
+                        <li><a class="dropdown-item" href="../html/intro.html">HTML</a></li>
+                        <li><a class="dropdown-item" href="#">CSS</a></li>
+                        <li><a class="dropdown-item" href="#">JavaScript</a></li>
+                        <li><a class="dropdown-item" href="#">JAVA</a></li>
+                        <li><a class="dropdown-item" href="#">Python</a></li>
+                        <li><a class="dropdown-item" href="#">C programming</a></li>
+                        <li><a class="dropdown-item" href="#">SQL</a></li>
+                        <li><a class="dropdown-item" href="#">Penetration Testing</a></li>
+                        <li><a class="dropdown-item" href="#">Networking</a></li>
+                        <li><a class="dropdown-item" href="../linux/intro.html">Linux basics</a></li>
+                      </ul>
+                    </div>
+                    <div class="mega-dropdown-column pb-2 pt-lg-3 pb-lg-4">
+                      <ul class="list-unstyled mb-0">
+                        <h3>Other Courses</h3>
+                        <li><a class="dropdown-item" href="#">Learn Bootstrap</a><span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 zindex-2 opacity-0" style="background-image: url(assets/img/courses/bootstrap-original.svg);"></span></li>
+                        <li><a class="dropdown-item" href="#">React</a><span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 zindex-2 opacity-0" style="background-image: url(assets/img/courses/react-original.svg);"></span></li>
+                        <li><a class="dropdown-item" href="#">PHP</a><span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 zindex-2 opacity-0" style="background-image: url(assets/img/courses/php-original.svg);"></span></li>
+                        <li><a class="dropdown-item" href="#">C#</a><span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 zindex-2 opacity-0" style="background-image: url(assets/img/courses/csharp-original.svg);"></span></li>
+                        <li><a class="dropdown-item" href="#">Introduction To ChatGPT <span class="text-danger fs-xs ms-2">New</span></a><span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 zindex-2 opacity-0" style="background-image: url(assets/img/megamenu/yeoga-studio.jpg);"></span></li>
+                        <li><a class="dropdown-item" href="#">Data Science<span class="text-danger fs-xs ms-2">New</span></a><span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 zindex-2 opacity-0" style="background-image: url(assets/img/megamenu/i2nfluencer.jpg);"></span></li>
+                        <li><a class="dropdown-item" href="#">Career Road<span class="text-danger fs-xs ms-2">New</span></a><span class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 zindex-2 opacity-0" style="background-image: url(assets/img/megamenu/eog-homepage.jpg);"></span></li>
+                      </ul>
+                    </div>
+                    
+                  </div>
+                </div>
+              </li>
+          <li class="nav-item"><a class="nav-link" href="#"><i class="ai-file-text fs-lg opacity-90 me-2"></i>References</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+        </ul>
+        <div class="form-check form-switch mode-switch pe-lg-1 ms-auto" data-bs-toggle="mode">
+          <input class="form-check-input" type="checkbox" id="theme-mode">
+          <label class="form-check-label" for="theme-mode"><i class="ai-sun fs-lg"></i></label>
+          <label class="form-check-label" for="theme-mode"><i class="ai-moon fs-lg"></i></label>
+        </div>
+        <button class="navbar-toggler d-block d-lg-none ms-3 border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#componentsNav"><span class="navbar-toggler-icon"></span></button><a class="btn btn-sm btn-primary d-none d-lg-inline-flex fs-sm ms-4" href="#"><i class="ai-login d-sm-inline-block fs-xl me-2 ms-n1"></i>Login</a>
+      </div>
+      
+    </header>
+
+      <!-- Desktop sidebar navigation (on screens > 991px) (Offcanvas)-->
+      <aside class="container position-fixed d-none d-lg-block start-50 translate-middle-x h-100 pt-5">
+        <div class="row h-100 pt-5">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="../index.html"><i class="ai-home fs-base"></i></a>
+              </li>
+              <li class="breadcrumb-item"><a href="../index.html">Courses</a></li>
+              <li class="breadcrumb-item active" aria-current="page">C Programming</li>
+            </ol>
+          </nav>
+          <div class="col-lg-3 d-flex flex-column pb-3 pt-4" style="height: calc(100% - 2rem);">
+            <div class="h-100 mt-2" data-simplebar>
+              <h3 class="h5 mb-1 pb-2">Content</h3>
+              <ul class="nav flex-column">
+                <li class="nav-item" id="icons"><a class="nav-link px-0 py-2" href="../C/intro.html"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Introduction</a>
+                </li>
+                <li class="nav-item" id="code"><a class="nav-link px-0 py-2" href="../C/basic_syntax.html"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2">Basic Syntax in C</i></a>
+                </li>
+                <li class="nav-item" id="imgs"><a class="nav-link px-0 py-2" href=""><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Control Flow</a>
+                </li>
+                <!-- ----------------#active --------------->
+                <li class="nav-item"><span class="nav-link px-0 py-2 active"><i class="ai-circle-arrow-down fs-lg opacity-90 me-2">Function</i></span>
+                  <ul class="nav flex-column border-start ps-3 ms-2 mb-2">
+                    <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#keywords" data-scroll="data-scroll">Keywords in C</a></li>
+                    <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#identifiers" data-scroll="data-scroll">identifiers</a></li>
+                    <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#variables" data-scroll="data-scroll">Variables</a></li>
+                    <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#data-types" data-scroll="data-scroll"> Data Types</a></li>
+                    <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#constants" data-scroll="data-scroll">Constants</a></li>
+                    <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#operators" data-scroll="data-scroll">Operators</a></li>
+                    <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#io" data-scroll="data-scroll">Input/Output Fundamentals</a></li>
+                    </ul>
+                </li>
+            <!-------------#end active------------->
+                <li class="nav-item" id="tables"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Arrays and Strings</a>
+                </li>
+                <li class="nav-item" id="accordion"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Pointers</a>
+                </li>
+                <li class="nav-item" id="alerts"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Structures and Unions</a>
+                </li>
+                <li class="nav-item" id="badges"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Dynamic Memory Allocation</a>
+                </li>
+                <li class="nav-item" id="blog"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>File Handling in C</a>
+                </li>
+                <li class="nav-item" id="breadcrumb"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Advanced C Topics</a>
+                </li>
+                <li class="nav-item" id="btns"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Debugging and Best Practices</a>
+                </li>
+                <li class="nav-item" id="btn-group"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Introduction to Data Structures and Algorithms</a>
+                </li>
+                <li class="nav-item" id="cards-basic"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>C Programming Projects for Beginners</a>
+                </li>
+                <li class="nav-item" id="cards-hover"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Conclusion</a>
+                </li>
+              </ul>
+              <h3 class="h5 mb-1 pt-4 pb-2">Practice and test</h3>
+              <ul class="nav flex-column mb-0">
+                <li class="nav-item"><a class="nav-link px-0 py-2" href="#" target="_blank" rel="noopener"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Practice Test</a></li>
+              </ul>
+              <ul class="nav flex-column">
+                <li class="nav-item" id="utils"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>FAQs</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </aside>
+  
+    <!-- Mobile offcanvas navigation (on screens < 992px)-->
+    <div class="offcanvas offcanvas-start" id="componentsNav">
+      <div class="offcanvas-header align-items-center">
+        <div class="d-flex align-items-center">
+          <h4 class="offcanvas-title">Menu</h4>
+        </div>
+        <button class="btn-close" type="button" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <ul class="nav flex-column border-bottom pb-4">
+        <li class="nav-item"><a class="nav-link py-2" href="../index.html"><i class="ai-home fs-lg opacity-90 me-2"></i>Home</a></li>
+        <li class="nav-item"><a class="nav-link py-2" href="#"><i class="ai-file-text fs-lg opacity-90 me-2"></i>References</a></li>
+        <li class="nav-item"><a class="nav-link py-2" href="#"><i class="ai-blog fs-lg opacity-90 me-2"></i>Blog</a></li>
+      </ul>
+      <div class="offcanvas-body">
+        <h3 class="h5 mb-1 pb-2">Content</h3>
+        <ul class="nav flex-column">
+          <li class="nav-item" id="icons"><a class="nav-link px-0 py-2" href="../C/intro.html"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Introduction</a>
+          </li>
+          <li class="nav-item" id="code"><a class="nav-link px-0 py-2" href="../C/basic_syntax.html"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2">Basic Syntax in C</i></a>
+          </li>
+          <li class="nav-item" id="imgs"><a class="nav-link px-0 py-2" href=""><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Control Flow</a>
+          </li>
+          <!-- ----------------#active --------------->
+          <li class="nav-item"><span class="nav-link px-0 py-2 active"><i class="ai-circle-arrow-down fs-lg opacity-90 me-2">Function</i></span>
+            <ul class="nav flex-column border-start ps-3 ms-2 mb-2">
+              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#keywords" data-scroll="data-scroll">Keywords in C</a></li>
+              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#identifiers" data-scroll="data-scroll">identifiers</a></li>
+              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#variables" data-scroll="data-scroll">Variables</a></li>
+              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#data-types" data-scroll="data-scroll"> Data Types</a></li>
+              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#constants" data-scroll="data-scroll">Constants</a></li>
+              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#operators" data-scroll="data-scroll">Operators</a></li>
+              <li class="nav-item"><a class="nav-link fs-sm fw-normal py-1 ps-1 pe-0 mb-1" href="#io" data-scroll="data-scroll">Input/Output Fundamentals</a></li>
+              </ul>
+          </li>
+      <!-------------#end active------------->
+          <li class="nav-item" id="tables"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Arrays and Strings</a>
+          </li>
+          <li class="nav-item" id="accordion"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Pointers</a>
+          </li>
+          <li class="nav-item" id="alerts"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Structures and Unions</a>
+          </li>
+          <li class="nav-item" id="badges"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Dynamic Memory Allocation</a>
+          </li>
+          <li class="nav-item" id="blog"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>File Handling in C</a>
+          </li>
+          <li class="nav-item" id="breadcrumb"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Advanced C Topics</a>
+          </li>
+          <li class="nav-item" id="btns"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Debugging and Best Practices</a>
+          </li>
+          <li class="nav-item" id="btn-group"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Introduction to Data Structures and Algorithms</a>
+          </li>
+          <li class="nav-item" id="cards-basic"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>C Programming Projects for Beginners</a>
+          </li>
+          <li class="nav-item" id="cards-hover"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Conclusion</a>
+          </li>
+        </ul>
+        <h3 class="h5 mb-1 pt-4 pb-2">Practice and test</h3>
+        <ul class="nav flex-column mb-0">
+          <li class="nav-item"><a class="nav-link px-0 py-2" href="#" target="_blank" rel="noopener"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>Practice Test</a></li>
+        </ul>
+        <ul class="nav flex-column">
+          <li class="nav-item" id="utils"><a class="nav-link px-0 py-2" href="#"><i class="ai-circle-arrow-right fs-lg opacity-90 me-2"></i>FAQs</a>
+          </li>
+        </ul>
+      </div>
+      <div class="offcanvas-header border-top"><a class="btn btn-primary w-100" href="#"><i class="ai-login d-sm-inline-block fs-xl me-2 ms-n1"></i>Sign Up</a></div>
+    </div>
